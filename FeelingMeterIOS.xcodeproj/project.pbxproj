@@ -16,6 +16,9 @@
 		A2C9B83E2209C01A003B5DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83C2209C01A003B5DF1 /* LaunchScreen.storyboard */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
 		A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */; };
+		A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
+		A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
+		A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* MainStateTests.swift */; };
 		BE78466C2AEE27685D209F14 /* Pods_FeelingMeterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609125391A2F835719B8F5F /* Pods_FeelingMeterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,8 @@
 		A2C9B84F2209C01A003B5DF1 /* FeelingMeterIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSUITests.swift; sourceTree = "<group>"; };
 		A2C9B8552209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2C9B8632209C8AA003B5DF1 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		A2C9B867220B1930003B5DF1 /* MainStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateTests.swift; sourceTree = "<group>"; };
 		D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9EC4EF9244B9DC6D8E7D315 /* Pods-FeelingMeterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +132,7 @@
 		A2C9B8322209C018003B5DF1 /* FeelingMeterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A2C9B8622209C883003B5DF1 /* State */,
 				A2C9B8332209C018003B5DF1 /* AppDelegate.swift */,
 				A2C9B8352209C018003B5DF1 /* ViewController.swift */,
 				A2C9B8372209C018003B5DF1 /* Main.storyboard */,
@@ -140,6 +146,7 @@
 		A2C9B8472209C01A003B5DF1 /* FeelingMeterIOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A2C9B866220B18F2003B5DF1 /* State */,
 				A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
 			);
@@ -153,6 +160,22 @@
 				A2C9B8552209C01A003B5DF1 /* Info.plist */,
 			);
 			path = FeelingMeterIOSUITests;
+			sourceTree = "<group>";
+		};
+		A2C9B8622209C883003B5DF1 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B8632209C8AA003B5DF1 /* MainState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A2C9B866220B18F2003B5DF1 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B867220B1930003B5DF1 /* MainStateTests.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		D953A9BF12F4DC03113C3330 /* Frameworks */ = {
@@ -392,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B8362209C018003B5DF1 /* ViewController.swift in Sources */,
+				A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */,
 				A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +424,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */,
+				A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */,
 				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

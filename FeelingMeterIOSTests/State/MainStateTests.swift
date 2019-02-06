@@ -1,23 +1,28 @@
 //
-//  FeelingMeterIOSTests.swift
-//  FeelingMeterIOSTests
+//  MainState.swift
+//  FeelingMeterIOS
 //
-//  Created by Andrew Bricker on 2/5/19.
+//  Created by Andrew Bricker on 2/6/19.
 //  Copyright © 2019 code FU Creative. All rights reserved.
 //
 
 import ReSwift
-
 import XCTest
-@testable import FeelingMeterIOS
 
-class FeelingMeterIOSTests: XCTestCase {
+struct EmptyAction: Action { }
+
+class MainStateTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testInitialState() {
+        let state = mainReducer(action: EmptyAction(), state: nil)
+        XCTAssertEqual(state, MainState())
     }
 }
