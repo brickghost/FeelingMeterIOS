@@ -21,8 +21,13 @@ class MainStateTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testInitialState() {
+    func testReducerReturnsMainState() {
         let state = mainReducer(action: EmptyAction(), state: nil)
         XCTAssertEqual(state, MainState())
+    }
+    
+    func testDefaultFeeling() {
+        let state = mainReducer(action: EmptyAction(), state: nil)
+        XCTAssertEqual(state.feeling, .terrible)
     }
 }
