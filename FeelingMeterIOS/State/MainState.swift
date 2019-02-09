@@ -18,17 +18,31 @@ struct MainState: StateType, Equatable {
     }
 }
 
+// MARK:- REDUCERS
 func mainReducer(action: Action, state: MainState?) -> MainState {
     var state = state ?? MainState()
+    
+    switch action {
+    case let feeling as changeFeeling:
+        state.feeling = feeling.feeling
+    default:
+        return state
+    }
     
     return state
 }
 
+// MARK:- ACTIONS
+struct changeFeeling: Action {
+    var feeling: Feeling
+}
+
 // MARK: MODEL/OPTIONS
+
 enum Feeling: String {
     case terrible = "Existence is pain"
     case notSoGood = "I can't adult today"
-    case meh = "Whatever man"
-    case ok = "Could be worse"
+    case meh = "I just want my rug, man"
+    case ok = "Just another day in paradise"
     case great = "I can't feel my face"
 }

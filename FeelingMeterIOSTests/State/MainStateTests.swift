@@ -4,7 +4,6 @@
 //
 //  Created by Andrew Bricker on 2/6/19.
 //  Copyright © 2019 code FU Creative. All rights reserved.
-//
 
 import ReSwift
 import XCTest
@@ -13,8 +12,9 @@ struct EmptyAction: Action { }
 
 class MainStateTests: XCTestCase {
 
+    var  state = MainState()
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        state = mainReducer(action: EmptyAction(), state: nil)
     }
     
     override func tearDown() {
@@ -22,12 +22,15 @@ class MainStateTests: XCTestCase {
     }
     
     func testReducerReturnsMainState() {
-        let state = mainReducer(action: EmptyAction(), state: nil)
         XCTAssertEqual(state, MainState())
     }
     
     func testDefaultFeeling() {
-        let state = mainReducer(action: EmptyAction(), state: nil)
         XCTAssertEqual(state.feeling, .terrible)
+    }
+    
+    func testChangeFeeling() {
+        state = mainReducer(action: changeFeeling(feeling: .great), state: nil)
+        XCTAssertEqual(state.feeling, .great)
     }
 }
