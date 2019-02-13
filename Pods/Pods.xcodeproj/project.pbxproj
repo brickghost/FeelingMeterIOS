@@ -7,30 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01712BECF50963F0CA4BC67018D843E6 /* ReSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01DC52076BE8F57F47329FB0D308FA84 /* Pods-FeelingMeterIOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4384EA593AA785E926C1596F0904A8C /* Pods-FeelingMeterIOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04C59D5A9C962D82CDB37666B03B10CF /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */; };
-		13D155A05EC7B8B15402B62FD1063525 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		19F99061876CA865EF3920602F233D90 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */; };
-		25F038D96E1A2862D5C1B8938B396659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		2FB487426528FB2C510E8FC5BCB849F6 /* Pods-FeelingMeterIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 719CC6A67707A6C5B619930AD493884F /* Pods-FeelingMeterIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		313A9255A59E2887B6B1E2DC9BEFD805 /* Pods-FeelingMeterIOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C8233BD0CBF79602423DCE3F16327 /* Pods-FeelingMeterIOS-dummy.m */; };
+		06423588A3FBA7A1D1EB3C2B9055002C /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E21126E39A109B7D23A829BB81CABAA /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06C93C301E273256CD969119686A4DE3 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4746DF2FB39CD1E0822D82F506A1322D /* NSLayoutConstraint+PureLayout.m */; };
+		126C47642D0DE810288DDA4C6D372529 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D608FE1EBBD4D2523E66F63446E2F7 /* PureLayout-dummy.m */; };
+		190C9CD09695205D23F0A777F6CE7938 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A853337106DCCFBE191133E06A27F3EB /* Coding.swift */; };
+		2908350E1A147E7A831A2B9098467F1B /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 035FA8AFB6FAC2E51562CC700EAEF02B /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FE51E26637C58099125DA05381EADB3 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE8D4E0E1D1D422711C85C3C6758DFE /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		326E30E0BD3B08D164E9FEE0441BF452 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D43B9081FF92103C5D9F4889255ED88D /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32C69ECEC46D136A833FDD704BDCC0B2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A495BB89D0D4870374749691E1FDFAFC /* NSArray+PureLayout.m */; };
 		35E481F04FB130FF7BC50B2CAD4ACB7D /* Pods-FeelingMeterIOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661617B57909F278EFFD90EF986DF03 /* Pods-FeelingMeterIOSTests-dummy.m */; };
-		6A7EA2A40BA82F87016936F8BC86A87C /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */; };
-		6E20A2A9F4642A28044ABA0087AFEC4F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */; };
-		6FEA626945408B9D75C60A24FCAB7E4F /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */; };
-		7938D5D730C532F1CEC22AE0599A04EA /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */; };
-		79A116B9AB67397C023906B57AA77F14 /* ReSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */; };
+		3FA070B32249A177038F61F8F93259AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		73E85043005C084A1A3F632CCA4422B6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C47896AA495F9E0388B4892F73916 /* Store.swift */; };
+		7614F925A9ADE2C6834046BC13539970 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		7BB0EFA9F9E1B70079584F48806E7B5C /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080686588FC7469A95CC25A764242A77 /* Subscription.swift */; };
+		845BA4321872DC23D9E4D680B36BD8D5 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E02B393486AC0667E1A014A36D45785E /* ALView+PureLayout.m */; };
 		84E76DBE6F321196790F67404A34CE67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		85A8B5AE3695B9A486BC6422681F288D /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */; };
-		97538DC60C736A8ABC105992218F8482 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */; };
+		87162637A753601A151EDE39CF3BD35E /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB99A1AADFF054979B96A0FCE115C0 /* StoreSubscriber.swift */; };
+		88788C0D31D8AF3B9D9B53748557A6B2 /* Pods-FeelingMeterIOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C8233BD0CBF79602423DCE3F16327 /* Pods-FeelingMeterIOS-dummy.m */; };
 		989E796E397AE1E7192755E0AE2719C1 /* Pods-FeelingMeterIOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14279BCBF286CDADCA889A71248F717C /* Pods-FeelingMeterIOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C6561212B6538A66B4F2D232CBA088A /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC871B7066428FF774C5F9208197F11C /* Middleware.swift */; };
-		A501070A7EE5C1243C5F02F7AB4FECF9 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */; };
+		9E4C6E5C9338E7ED3A19443F37614B44 /* ReSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2707321F78ECB46E941D92AA1A3E8967 /* ReSwift-dummy.m */; };
+		9EE42E22AEC65A166698FCA9A926DDAF /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A047063E3AE32B36A91AB82A832EAC9 /* State.swift */; };
+		A8BCEBBC4FA9F20D60C6F1DFDC24E86F /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E269B676E44B8B0F177E7A1CE7015 /* Assertions.swift */; };
+		B7CD03252565CB7C77DA3C0F1703AB2D /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B2F87B53225194F5B2A2F063CF3348 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFDF05D8FFA068EC24EA3C6D049876B4 /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F506D21FDE2D51439949ED81EAB62D /* TypeHelper.swift */; };
 		C32BF474387E874832E3EB5B1B1FDDDA /* Pods-FeelingMeterIOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 941EC73452668173AEE065E741266A6C /* Pods-FeelingMeterIOSUITests-dummy.m */; };
-		CE0A64122BD1A8BF541F0BA2523842ED /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */; };
 		D0AC443EB0AC319EE74BC0551142A811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		F09B72E1D10BD4A219A513008E32F2F7 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */; };
+		D7728D9C1997D99E505182D6B45B0404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		D85DB3FC7C0D631D8B69473375C69327 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496D819B27257A81A8ACF1BB6C8210A /* StoreType.swift */; };
+		DFB37C276EA19EB04BCA9D25E07E77B0 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99AB2DD5F4388F5E8ED67D5E1DF521 /* Reducer.swift */; };
+		E805F13675DCD1413EC9387DB3EA4CA4 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593FCD93B35278A81625EA1DA3E8036F /* Middleware.swift */; };
+		EA34FC7AC20E7C43B0E80C1A20617795 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF6E0353D163E2023226A43D52B534F /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB6D7A64069D10620EEC2CB02872D665 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F706F87FBA6AF46064605AA8F17F3C7 /* Action.swift */; };
+		F02079B3663F9C3D59EB90839BD67C23 /* Pods-FeelingMeterIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 719CC6A67707A6C5B619930AD493884F /* Pods-FeelingMeterIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0AE15596BDA7F910DCD4DE5E782C267 /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89A1FB09424CF7DDC2EE2101074950 /* DispatchingStoreType.swift */; };
+		F2457564A3F13DE3AE8A91F2FA16DEE1 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C3EBFEB3140ED2E9AB5B93C0D1A121B7 /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5D14FEE36BFD192729E570E3342C29E /* ReSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F3C2D7D9DF22FB3A7BC783EC0CFA36 /* ReSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,88 +50,119 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57BD5A0C016E605448A09547C99F4116;
+			remoteGlobalIDString = 292E98380053FDC078050B4365C56EA8;
 			remoteInfo = "Pods-FeelingMeterIOS";
+		};
+		74A41140D168E1FB22D3BE6806609ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 783D88F6119FF95E70B2F375A94F077F;
+			remoteInfo = ReSwift;
+		};
+		D08C032B8FE3710F2460B027A44EB736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58CD51AB6AD81CF5E92FA0898BDF63A3;
+			remoteInfo = PureLayout;
 		};
 		D6A111D35DF50DF8FACD8E31691D1C1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57BD5A0C016E605448A09547C99F4116;
+			remoteGlobalIDString = 292E98380053FDC078050B4365C56EA8;
 			remoteInfo = "Pods-FeelingMeterIOS";
-		};
-		DB8872411EFBEEAC169FE40CD37083A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 030326603679D9102A2FBE41C3E7767D;
-			remoteInfo = ReSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08EE3232362611B34B8CA19B5202170B /* Pods_FeelingMeterIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOSUITests.framework; path = "Pods-FeelingMeterIOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		035FA8AFB6FAC2E51562CC700EAEF02B /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		0712CF74DF915949ADA4C200D72C7FA2 /* ReSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReSwift.modulemap; sourceTree = "<group>"; };
+		080686588FC7469A95CC25A764242A77 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ReSwift/CoreTypes/Subscription.swift; sourceTree = "<group>"; };
+		097E269B676E44B8B0F177E7A1CE7015 /* Assertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assertions.swift; path = ReSwift/Utils/Assertions.swift; sourceTree = "<group>"; };
+		0B91355D4607526A23878A528C59AE72 /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
 		0E5D2C2BADD14348918D2A698090CB30 /* Pods-FeelingMeterIOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOS-frameworks.sh"; sourceTree = "<group>"; };
 		14279BCBF286CDADCA889A71248F717C /* Pods-FeelingMeterIOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeelingMeterIOSUITests-umbrella.h"; sourceTree = "<group>"; };
+		1496D819B27257A81A8ACF1BB6C8210A /* StoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreType.swift; path = ReSwift/CoreTypes/StoreType.swift; sourceTree = "<group>"; };
 		1AE7AD96FB11DA1E046F90F497DD7A2E /* Pods-FeelingMeterIOSUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOSUITests-resources.sh"; sourceTree = "<group>"; };
 		1B382CFB1257C8AB98C876571F5544E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assertions.swift; path = ReSwift/Utils/Assertions.swift; sourceTree = "<group>"; };
+		1B99AB2DD5F4388F5E8ED67D5E1DF521 /* Reducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ReSwift/CoreTypes/Reducer.swift; sourceTree = "<group>"; };
+		22D608FE1EBBD4D2523E66F63446E2F7 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		25537D5D372CE8D006977C7C1808CEDD /* Pods-FeelingMeterIOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOS-resources.sh"; sourceTree = "<group>"; };
-		2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ReSwift/CoreTypes/Action.swift; sourceTree = "<group>"; };
+		2707321F78ECB46E941D92AA1A3E8967 /* ReSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReSwift-dummy.m"; sourceTree = "<group>"; };
 		28499C55D9638159A98D43CE7268D446 /* Pods-FeelingMeterIOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FeelingMeterIOSUITests.modulemap"; sourceTree = "<group>"; };
-		305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReSwift.xcconfig; sourceTree = "<group>"; };
-		375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = ReSwift/CoreTypes/State.swift; sourceTree = "<group>"; };
+		2E21126E39A109B7D23A829BB81CABAA /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		3BC8A0766632A813963083D5E3AE1894 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		3DF6E0353D163E2023226A43D52B534F /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
 		45F39E63563AC913933DFD5488CDC169 /* Pods-FeelingMeterIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		45F3C2D7D9DF22FB3A7BC783EC0CFA36 /* ReSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-umbrella.h"; sourceTree = "<group>"; };
+		4746DF2FB39CD1E0822D82F506A1322D /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		4A63F41BCB8D5F2DEF85F1DF1D5D9998 /* Pods-FeelingMeterIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeelingMeterIOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		4AFD439A8B2F079AC8ECBFA073AFC460 /* Pods-FeelingMeterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4C84F71DA0D745826494E10BF07B766D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F03F6808600720164F99C0A869B4B2F /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ReSwift.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F506D21FDE2D51439949ED81EAB62D /* TypeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeHelper.swift; path = ReSwift/Utils/TypeHelper.swift; sourceTree = "<group>"; };
 		54C7144F84F983198BDDC15BB0DAB9C7 /* Pods-FeelingMeterIOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		5931B2E5A6EF9D72B2CD3EB6E96DF44D /* Pods-FeelingMeterIOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOSTests-resources.sh"; sourceTree = "<group>"; };
-		6208DC9A660BB572C0BA98791E228144 /* Pods_FeelingMeterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOS.framework; path = "Pods-FeelingMeterIOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		593FCD93B35278A81625EA1DA3E8036F /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = ReSwift/CoreTypes/Middleware.swift; sourceTree = "<group>"; };
+		5A047063E3AE32B36A91AB82A832EAC9 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = ReSwift/CoreTypes/State.swift; sourceTree = "<group>"; };
+		5B69DB1732080D8A41F34840D569DF59 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D89A1FB09424CF7DDC2EE2101074950 /* DispatchingStoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchingStoreType.swift; path = ReSwift/CoreTypes/DispatchingStoreType.swift; sourceTree = "<group>"; };
 		650C496318F0192785861E5FDA7C798A /* Pods-FeelingMeterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6DA8A7D8800A77FC70C103351360F811 /* Pods_FeelingMeterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOSTests.framework; path = "Pods-FeelingMeterIOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ReSwift/CoreTypes/Reducer.swift; sourceTree = "<group>"; };
+		696B1753416AAF856CC3287B4741A6A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		719CC6A67707A6C5B619930AD493884F /* Pods-FeelingMeterIOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeelingMeterIOS-umbrella.h"; sourceTree = "<group>"; };
 		7938A290FC4C192D548FC54F9AE926DF /* Pods-FeelingMeterIOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeelingMeterIOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = ReSwift/Utils/Coding.swift; sourceTree = "<group>"; };
 		7DA693776EBE555FCD9F4197D3ACEDD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F706F87FBA6AF46064605AA8F17F3C7 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ReSwift/CoreTypes/Action.swift; sourceTree = "<group>"; };
 		805FE4F496F4BE58F6D34F704B325405 /* Pods-FeelingMeterIOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeelingMeterIOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ReSwift/CoreTypes/Store.swift; sourceTree = "<group>"; };
-		82AEBEE6FCB0A69A422ED187AAFE6BCB /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ReSwift.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeHelper.swift; path = ReSwift/Utils/TypeHelper.swift; sourceTree = "<group>"; };
-		8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreType.swift; path = ReSwift/CoreTypes/StoreType.swift; sourceTree = "<group>"; };
+		87DCCEE22E9316C285AE50A745E981C3 /* ReSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-prefix.pch"; sourceTree = "<group>"; };
 		913C8233BD0CBF79602423DCE3F16327 /* Pods-FeelingMeterIOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeelingMeterIOS-dummy.m"; sourceTree = "<group>"; };
+		92B2F87B53225194F5B2A2F063CF3348 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941EC73452668173AEE065E741266A6C /* Pods-FeelingMeterIOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeelingMeterIOSUITests-dummy.m"; sourceTree = "<group>"; };
-		9632B848A020E18CE30927D8BEB43D91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9661617B57909F278EFFD90EF986DF03 /* Pods-FeelingMeterIOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeelingMeterIOSTests-dummy.m"; sourceTree = "<group>"; };
 		9755753CD47139C2333F865184749F83 /* Pods-FeelingMeterIOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FeelingMeterIOSTests.modulemap"; sourceTree = "<group>"; };
 		9C37A02627A58CD07DEFCECD9A2553CF /* Pods-FeelingMeterIOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeelingMeterIOSUITests-frameworks.sh"; sourceTree = "<group>"; };
-		9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReSwift-dummy.m"; sourceTree = "<group>"; };
-		AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchingStoreType.swift; path = ReSwift/CoreTypes/DispatchingStoreType.swift; sourceTree = "<group>"; };
-		AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreSubscriber.swift; path = ReSwift/CoreTypes/StoreSubscriber.swift; sourceTree = "<group>"; };
+		A495BB89D0D4870374749691E1FDFAFC /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		A7BABD466C3FDD8643DE35B995168772 /* Pods_FeelingMeterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOS.framework; path = "Pods-FeelingMeterIOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A853337106DCCFBE191133E06A27F3EB /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = ReSwift/Utils/Coding.swift; sourceTree = "<group>"; };
+		AC7C47896AA495F9E0388B4892F73916 /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ReSwift/CoreTypes/Store.swift; sourceTree = "<group>"; };
 		B7A8B1134113E61B73C8D5EA27DA4EDA /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
 		BA479C4B6F8980F92215BC97BE4CD7A1 /* Pods-FeelingMeterIOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeelingMeterIOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C247E7A261F51E916ED58E75E4A41B71 /* ReSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReSwift.xcconfig; sourceTree = "<group>"; };
+		C3EBFEB3140ED2E9AB5B93C0D1A121B7 /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		C45F9F03C995CA3213A3DA5F629D5E88 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52FB164CBB71964BFB4A91302729817 /* Pods-FeelingMeterIOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FeelingMeterIOS.modulemap"; sourceTree = "<group>"; };
-		C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-umbrella.h"; sourceTree = "<group>"; };
-		CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ReSwift/CoreTypes/Subscription.swift; sourceTree = "<group>"; };
+		CEE8D4E0E1D1D422711C85C3C6758DFE /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		CF290CAA50AA86E2FC92821552D2BB2E /* Pods-FeelingMeterIOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeelingMeterIOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CFA03599B40A287AFC855BCF3B7F2971 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		D43B9081FF92103C5D9F4889255ED88D /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D909BC67AF31E4B961F7F15C5E016203 /* Pods-FeelingMeterIOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeelingMeterIOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DF00F887F15B2E15AF36620E45FA539E /* ReSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReSwift.modulemap; sourceTree = "<group>"; };
+		E02B393486AC0667E1A014A36D45785E /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		E1EB99A1AADFF054979B96A0FCE115C0 /* StoreSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreSubscriber.swift; path = ReSwift/CoreTypes/StoreSubscriber.swift; sourceTree = "<group>"; };
+		E28A1C3F8D1EC4748CFA2B9B3EB0DA3B /* Pods_FeelingMeterIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOSTests.framework; path = "Pods-FeelingMeterIOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32B79BD717F79F889A7C6B377E43998 /* Pods-FeelingMeterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4384EA593AA785E926C1596F0904A8C /* Pods-FeelingMeterIOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeelingMeterIOSTests-umbrella.h"; sourceTree = "<group>"; };
-		FC871B7066428FF774C5F9208197F11C /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = ReSwift/CoreTypes/Middleware.swift; sourceTree = "<group>"; };
-		FE06E1C81518F26C25E3FEACC6270203 /* ReSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-prefix.pch"; sourceTree = "<group>"; };
+		EBC3FA20650B0F8B4D62DAC300883983 /* Pods_FeelingMeterIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FeelingMeterIOSUITests.framework; path = "Pods-FeelingMeterIOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE1F6B697450B4A2291E4FCE75526C8 /* Pods-FeelingMeterIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeelingMeterIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71649CFE0ADFF4B021E14D8A1448E165 /* Frameworks */ = {
+		27CC49C0AC3C620F2F414238AB0FB0EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F038D96E1A2862D5C1B8938B396659 /* Foundation.framework in Frameworks */,
+				3FA070B32249A177038F61F8F93259AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		335A86E52BA400DF8DBF521395DEC95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7728D9C1997D99E505182D6B45B0404 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,19 +174,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A599B8642CA36C59A78AD5E052E810C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7614F925A9ADE2C6834046BC13539970 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DF355CBD28A14B6DBB1754E22183AAFF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84E76DBE6F321196790F67404A34CE67 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA2128EB5DDFC3BFA536A054B1A4410D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13D155A05EC7B8B15402B62FD1063525 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,25 +211,39 @@
 			path = "Target Support Files/Pods-FeelingMeterIOSTests";
 			sourceTree = "<group>";
 		};
-		1334C0328849627CED539AF332118725 /* ReSwift */ = {
+		1388C8A8195403B708089F5C53F6A20C /* ReSwift */ = {
 			isa = PBXGroup;
 			children = (
-				2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */,
-				1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */,
-				79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */,
-				AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */,
-				FC871B7066428FF774C5F9208197F11C /* Middleware.swift */,
-				71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */,
-				375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */,
-				81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */,
-				AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */,
-				8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */,
-				CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */,
-				83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */,
-				D3D68B54E743ABB0B1D0C26EC23C8DA4 /* Support Files */,
+				7F706F87FBA6AF46064605AA8F17F3C7 /* Action.swift */,
+				097E269B676E44B8B0F177E7A1CE7015 /* Assertions.swift */,
+				A853337106DCCFBE191133E06A27F3EB /* Coding.swift */,
+				5D89A1FB09424CF7DDC2EE2101074950 /* DispatchingStoreType.swift */,
+				593FCD93B35278A81625EA1DA3E8036F /* Middleware.swift */,
+				1B99AB2DD5F4388F5E8ED67D5E1DF521 /* Reducer.swift */,
+				5A047063E3AE32B36A91AB82A832EAC9 /* State.swift */,
+				AC7C47896AA495F9E0388B4892F73916 /* Store.swift */,
+				E1EB99A1AADFF054979B96A0FCE115C0 /* StoreSubscriber.swift */,
+				1496D819B27257A81A8ACF1BB6C8210A /* StoreType.swift */,
+				080686588FC7469A95CC25A764242A77 /* Subscription.swift */,
+				51F506D21FDE2D51439949ED81EAB62D /* TypeHelper.swift */,
+				2288101BEFB89FB3F8224E582E512D73 /* Support Files */,
 			);
 			name = ReSwift;
 			path = ReSwift;
+			sourceTree = "<group>";
+		};
+		2288101BEFB89FB3F8224E582E512D73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C45F9F03C995CA3213A3DA5F629D5E88 /* Info.plist */,
+				0712CF74DF915949ADA4C200D72C7FA2 /* ReSwift.modulemap */,
+				C247E7A261F51E916ED58E75E4A41B71 /* ReSwift.xcconfig */,
+				2707321F78ECB46E941D92AA1A3E8967 /* ReSwift-dummy.m */,
+				87DCCEE22E9316C285AE50A745E981C3 /* ReSwift-prefix.pch */,
+				45F3C2D7D9DF22FB3A7BC783EC0CFA36 /* ReSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReSwift";
 			sourceTree = "<group>";
 		};
 		28328B93E5A110CA0F87A53A862E57F8 /* Targets Support Files */ = {
@@ -212,21 +269,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A58919414556FF8285FCC0A42B1AC168 /* Pods */,
-				84217B1F272BDF00CCBFB9AB90EAD8C6 /* Products */,
+				E890AD8B86B50BB9093BB33974D6C5BF /* Pods */,
+				BCD54FBC8E3CF2BE3ACB34C95437164C /* Products */,
 				28328B93E5A110CA0F87A53A862E57F8 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		84217B1F272BDF00CCBFB9AB90EAD8C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6208DC9A660BB572C0BA98791E228144 /* Pods_FeelingMeterIOS.framework */,
-				6DA8A7D8800A77FC70C103351360F811 /* Pods_FeelingMeterIOSTests.framework */,
-				08EE3232362611B34B8CA19B5202170B /* Pods_FeelingMeterIOSUITests.framework */,
-				82AEBEE6FCB0A69A422ED187AAFE6BCB /* ReSwift.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A064ECAED4A19844385E074711402FC4 /* Pods-FeelingMeterIOS */ = {
@@ -265,14 +311,6 @@
 			path = "Target Support Files/Pods-FeelingMeterIOSUITests";
 			sourceTree = "<group>";
 		};
-		A58919414556FF8285FCC0A42B1AC168 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1334C0328849627CED539AF332118725 /* ReSwift */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,28 +319,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3D68B54E743ABB0B1D0C26EC23C8DA4 /* Support Files */ = {
+		BCD54FBC8E3CF2BE3ACB34C95437164C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9632B848A020E18CE30927D8BEB43D91 /* Info.plist */,
-				DF00F887F15B2E15AF36620E45FA539E /* ReSwift.modulemap */,
-				305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */,
-				9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */,
-				FE06E1C81518F26C25E3FEACC6270203 /* ReSwift-prefix.pch */,
-				C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */,
+				A7BABD466C3FDD8643DE35B995168772 /* Pods_FeelingMeterIOS.framework */,
+				E28A1C3F8D1EC4748CFA2B9B3EB0DA3B /* Pods_FeelingMeterIOSTests.framework */,
+				EBC3FA20650B0F8B4D62DAC300883983 /* Pods_FeelingMeterIOSUITests.framework */,
+				5B69DB1732080D8A41F34840D569DF59 /* PureLayout.framework */,
+				4F03F6808600720164F99C0A869B4B2F /* ReSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBF8DFCF48DB09C48322B01CBE4D5692 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D43B9081FF92103C5D9F4889255ED88D /* ALView+PureLayout.h */,
+				E02B393486AC0667E1A014A36D45785E /* ALView+PureLayout.m */,
+				CEE8D4E0E1D1D422711C85C3C6758DFE /* NSArray+PureLayout.h */,
+				A495BB89D0D4870374749691E1FDFAFC /* NSArray+PureLayout.m */,
+				92B2F87B53225194F5B2A2F063CF3348 /* NSLayoutConstraint+PureLayout.h */,
+				4746DF2FB39CD1E0822D82F506A1322D /* NSLayoutConstraint+PureLayout.m */,
+				2E21126E39A109B7D23A829BB81CABAA /* PureLayout.h */,
+				3DF6E0353D163E2023226A43D52B534F /* PureLayout+Internal.h */,
+				C3EBFEB3140ED2E9AB5B93C0D1A121B7 /* PureLayoutDefines.h */,
+				DC31183EF367E49E46FC31B449ADAD2B /* Support Files */,
+			);
+			name = PureLayout;
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		DC31183EF367E49E46FC31B449ADAD2B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				696B1753416AAF856CC3287B4741A6A2 /* Info.plist */,
+				3BC8A0766632A813963083D5E3AE1894 /* PureLayout.modulemap */,
+				0B91355D4607526A23878A528C59AE72 /* PureLayout.xcconfig */,
+				22D608FE1EBBD4D2523E66F63446E2F7 /* PureLayout-dummy.m */,
+				CFA03599B40A287AFC855BCF3B7F2971 /* PureLayout-prefix.pch */,
+				035FA8AFB6FAC2E51562CC700EAEF02B /* PureLayout-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ReSwift";
+			path = "../Target Support Files/PureLayout";
+			sourceTree = "<group>";
+		};
+		E890AD8B86B50BB9093BB33974D6C5BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBF8DFCF48DB09C48322B01CBE4D5692 /* PureLayout */,
+				1388C8A8195403B708089F5C53F6A20C /* ReSwift */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4093EFC5C1D36DD9DB15F332285D20EC /* Headers */ = {
+		2F0C42680EBD49F120D0F0B482476C39 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB487426528FB2C510E8FC5BCB849F6 /* Pods-FeelingMeterIOS-umbrella.h in Headers */,
+				F02079B3663F9C3D59EB90839BD67C23 /* Pods-FeelingMeterIOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38222B169AF5A8033BD7BA2BA1637EDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D14FEE36BFD192729E570E3342C29E /* ReSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,52 +407,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7CE6B5948A29E77BEE0DA6D94863A49 /* Headers */ = {
+		DDF0AB592C8E6C11102A068B0CEA8736 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01712BECF50963F0CA4BC67018D843E6 /* ReSwift-umbrella.h in Headers */,
+				326E30E0BD3B08D164E9FEE0441BF452 /* ALView+PureLayout.h in Headers */,
+				2FE51E26637C58099125DA05381EADB3 /* NSArray+PureLayout.h in Headers */,
+				B7CD03252565CB7C77DA3C0F1703AB2D /* NSLayoutConstraint+PureLayout.h in Headers */,
+				EA34FC7AC20E7C43B0E80C1A20617795 /* PureLayout+Internal.h in Headers */,
+				2908350E1A147E7A831A2B9098467F1B /* PureLayout-umbrella.h in Headers */,
+				06423588A3FBA7A1D1EB3C2B9055002C /* PureLayout.h in Headers */,
+				F2457564A3F13DE3AE8A91F2FA16DEE1 /* PureLayoutDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		030326603679D9102A2FBE41C3E7767D /* ReSwift */ = {
+		292E98380053FDC078050B4365C56EA8 /* Pods-FeelingMeterIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8ABC0E46EDEC6A0CA819F4E27355FD88 /* Build configuration list for PBXNativeTarget "ReSwift" */;
+			buildConfigurationList = 9A9CF39E90838E205601FEA5B4A495E2 /* Build configuration list for PBXNativeTarget "Pods-FeelingMeterIOS" */;
 			buildPhases = (
-				E7CE6B5948A29E77BEE0DA6D94863A49 /* Headers */,
-				C18AE22948C9538757975443BE18EF33 /* Sources */,
-				71649CFE0ADFF4B021E14D8A1448E165 /* Frameworks */,
-				7474C916120EAB85585B1441D9761A2F /* Resources */,
+				2F0C42680EBD49F120D0F0B482476C39 /* Headers */,
+				29AADFF65B2BC15ABE3628E7E84A4C6D /* Sources */,
+				A599B8642CA36C59A78AD5E052E810C5 /* Frameworks */,
+				19073C61C37BBDCC7CD1D4081F7F529D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = ReSwift;
-			productName = ReSwift;
-			productReference = 82AEBEE6FCB0A69A422ED187AAFE6BCB /* ReSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		57BD5A0C016E605448A09547C99F4116 /* Pods-FeelingMeterIOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052E71AFE408F5220D6A677EAD57B25B /* Build configuration list for PBXNativeTarget "Pods-FeelingMeterIOS" */;
-			buildPhases = (
-				4093EFC5C1D36DD9DB15F332285D20EC /* Headers */,
-				E615164CD7FCED0C3FCFA518A8369B1E /* Sources */,
-				EA2128EB5DDFC3BFA536A054B1A4410D /* Frameworks */,
-				42E72B06124140E340E1B3D77B873208 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2AA1E4F09256735D989684B1FBB1889C /* PBXTargetDependency */,
+				294D0801853387AD7BDDEAC0B45CFEA5 /* PBXTargetDependency */,
+				30157C3AC3EDE9A74AC54ED29777115C /* PBXTargetDependency */,
 			);
 			name = "Pods-FeelingMeterIOS";
 			productName = "Pods-FeelingMeterIOS";
-			productReference = 6208DC9A660BB572C0BA98791E228144 /* Pods_FeelingMeterIOS.framework */;
+			productReference = A7BABD466C3FDD8643DE35B995168772 /* Pods_FeelingMeterIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		58CD51AB6AD81CF5E92FA0898BDF63A3 /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1EAA5D8EF035490A59284D6FB842795 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				DDF0AB592C8E6C11102A068B0CEA8736 /* Headers */,
+				8896337E2F5DEA11B2272681E728FB84 /* Sources */,
+				335A86E52BA400DF8DBF521395DEC95B /* Frameworks */,
+				475007AC607C9C55BF20704530DA9351 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = 5B69DB1732080D8A41F34840D569DF59 /* PureLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5B6B825185C911362BA0361FEB840E50 /* Pods-FeelingMeterIOSUITests */ = {
@@ -386,7 +478,7 @@
 			);
 			name = "Pods-FeelingMeterIOSUITests";
 			productName = "Pods-FeelingMeterIOSUITests";
-			productReference = 08EE3232362611B34B8CA19B5202170B /* Pods_FeelingMeterIOSUITests.framework */;
+			productReference = EBC3FA20650B0F8B4D62DAC300883983 /* Pods_FeelingMeterIOSUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6978058AC583060A9BBE929D7641C904 /* Pods-FeelingMeterIOSTests */ = {
@@ -405,7 +497,25 @@
 			);
 			name = "Pods-FeelingMeterIOSTests";
 			productName = "Pods-FeelingMeterIOSTests";
-			productReference = 6DA8A7D8800A77FC70C103351360F811 /* Pods_FeelingMeterIOSTests.framework */;
+			productReference = E28A1C3F8D1EC4748CFA2B9B3EB0DA3B /* Pods_FeelingMeterIOSTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		783D88F6119FF95E70B2F375A94F077F /* ReSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48CB7AB5180F371086221CD2F79092F0 /* Build configuration list for PBXNativeTarget "ReSwift" */;
+			buildPhases = (
+				38222B169AF5A8033BD7BA2BA1637EDD /* Headers */,
+				A8311587034B5DD57B31FDA921CA5293 /* Sources */,
+				27CC49C0AC3C620F2F414238AB0FB0EF /* Frameworks */,
+				CB3722C65B4CAAFEE3BEAAF130D24147 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReSwift;
+			productName = ReSwift;
+			productReference = 4F03F6808600720164F99C0A869B4B2F /* ReSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -425,27 +535,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 84217B1F272BDF00CCBFB9AB90EAD8C6 /* Products */;
+			productRefGroup = BCD54FBC8E3CF2BE3ACB34C95437164C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57BD5A0C016E605448A09547C99F4116 /* Pods-FeelingMeterIOS */,
+				292E98380053FDC078050B4365C56EA8 /* Pods-FeelingMeterIOS */,
 				6978058AC583060A9BBE929D7641C904 /* Pods-FeelingMeterIOSTests */,
 				5B6B825185C911362BA0361FEB840E50 /* Pods-FeelingMeterIOSUITests */,
-				030326603679D9102A2FBE41C3E7767D /* ReSwift */,
+				58CD51AB6AD81CF5E92FA0898BDF63A3 /* PureLayout */,
+				783D88F6119FF95E70B2F375A94F077F /* ReSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		42E72B06124140E340E1B3D77B873208 /* Resources */ = {
+		19073C61C37BBDCC7CD1D4081F7F529D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7474C916120EAB85585B1441D9761A2F /* Resources */ = {
+		475007AC607C9C55BF20704530DA9351 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,6 +564,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BE58770563B18653BAC06DFA59CC7DF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3722C65B4CAAFEE3BEAAF130D24147 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,6 +587,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29AADFF65B2BC15ABE3628E7E84A4C6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88788C0D31D8AF3B9D9B53748557A6B2 /* Pods-FeelingMeterIOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B334E8E5052494A36C0CCC3DA42BB4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,59 +611,138 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C18AE22948C9538757975443BE18EF33 /* Sources */ = {
+		8896337E2F5DEA11B2272681E728FB84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E20A2A9F4642A28044ABA0087AFEC4F /* Action.swift in Sources */,
-				04C59D5A9C962D82CDB37666B03B10CF /* Assertions.swift in Sources */,
-				19F99061876CA865EF3920602F233D90 /* Coding.swift in Sources */,
-				6FEA626945408B9D75C60A24FCAB7E4F /* DispatchingStoreType.swift in Sources */,
-				9C6561212B6538A66B4F2D232CBA088A /* Middleware.swift in Sources */,
-				A501070A7EE5C1243C5F02F7AB4FECF9 /* Reducer.swift in Sources */,
-				79A116B9AB67397C023906B57AA77F14 /* ReSwift-dummy.m in Sources */,
-				F09B72E1D10BD4A219A513008E32F2F7 /* State.swift in Sources */,
-				97538DC60C736A8ABC105992218F8482 /* Store.swift in Sources */,
-				6A7EA2A40BA82F87016936F8BC86A87C /* StoreSubscriber.swift in Sources */,
-				CE0A64122BD1A8BF541F0BA2523842ED /* StoreType.swift in Sources */,
-				85A8B5AE3695B9A486BC6422681F288D /* Subscription.swift in Sources */,
-				7938D5D730C532F1CEC22AE0599A04EA /* TypeHelper.swift in Sources */,
+				845BA4321872DC23D9E4D680B36BD8D5 /* ALView+PureLayout.m in Sources */,
+				32C69ECEC46D136A833FDD704BDCC0B2 /* NSArray+PureLayout.m in Sources */,
+				06C93C301E273256CD969119686A4DE3 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				126C47642D0DE810288DDA4C6D372529 /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E615164CD7FCED0C3FCFA518A8369B1E /* Sources */ = {
+		A8311587034B5DD57B31FDA921CA5293 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				313A9255A59E2887B6B1E2DC9BEFD805 /* Pods-FeelingMeterIOS-dummy.m in Sources */,
+				EB6D7A64069D10620EEC2CB02872D665 /* Action.swift in Sources */,
+				A8BCEBBC4FA9F20D60C6F1DFDC24E86F /* Assertions.swift in Sources */,
+				190C9CD09695205D23F0A777F6CE7938 /* Coding.swift in Sources */,
+				F0AE15596BDA7F910DCD4DE5E782C267 /* DispatchingStoreType.swift in Sources */,
+				E805F13675DCD1413EC9387DB3EA4CA4 /* Middleware.swift in Sources */,
+				DFB37C276EA19EB04BCA9D25E07E77B0 /* Reducer.swift in Sources */,
+				9E4C6E5C9338E7ED3A19443F37614B44 /* ReSwift-dummy.m in Sources */,
+				9EE42E22AEC65A166698FCA9A926DDAF /* State.swift in Sources */,
+				73E85043005C084A1A3F632CCA4422B6 /* Store.swift in Sources */,
+				87162637A753601A151EDE39CF3BD35E /* StoreSubscriber.swift in Sources */,
+				D85DB3FC7C0D631D8B69473375C69327 /* StoreType.swift in Sources */,
+				7BB0EFA9F9E1B70079584F48806E7B5C /* Subscription.swift in Sources */,
+				BFDF05D8FFA068EC24EA3C6D049876B4 /* TypeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2AA1E4F09256735D989684B1FBB1889C /* PBXTargetDependency */ = {
+		294D0801853387AD7BDDEAC0B45CFEA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 58CD51AB6AD81CF5E92FA0898BDF63A3 /* PureLayout */;
+			targetProxy = D08C032B8FE3710F2460B027A44EB736 /* PBXContainerItemProxy */;
+		};
+		30157C3AC3EDE9A74AC54ED29777115C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReSwift;
-			target = 030326603679D9102A2FBE41C3E7767D /* ReSwift */;
-			targetProxy = DB8872411EFBEEAC169FE40CD37083A3 /* PBXContainerItemProxy */;
+			target = 783D88F6119FF95E70B2F375A94F077F /* ReSwift */;
+			targetProxy = 74A41140D168E1FB22D3BE6806609ABF /* PBXContainerItemProxy */;
 		};
 		4B754D2F45571E6F825ABD566E222E80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-FeelingMeterIOS";
-			target = 57BD5A0C016E605448A09547C99F4116 /* Pods-FeelingMeterIOS */;
+			target = 292E98380053FDC078050B4365C56EA8 /* Pods-FeelingMeterIOS */;
 			targetProxy = D6A111D35DF50DF8FACD8E31691D1C1B /* PBXContainerItemProxy */;
 		};
 		942121B390F9876056F80B797F302ECF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-FeelingMeterIOS";
-			target = 57BD5A0C016E605448A09547C99F4116 /* Pods-FeelingMeterIOS */;
+			target = 292E98380053FDC078050B4365C56EA8 /* Pods-FeelingMeterIOS */;
 			targetProxy = 468098803A3267E33F7D94AC5A0EC580 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D1EA8C38CCEDB81F50E389728E6C3C0 /* Release */ = {
+		050378BD2557347B2007FF8CFA8F6F40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B91355D4607526A23878A528C59AE72 /* PureLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				PRODUCT_MODULE_NAME = PureLayout;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E06BFF15D3570F263D2A9978E5EED8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C247E7A261F51E916ED58E75E4A41B71 /* ReSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
+				PRODUCT_MODULE_NAME = ReSwift;
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1DE866C4DBEC942ACB8094E1806A8142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7A8B1134113E61B73C8D5EA27DA4EDA /* Pods-FeelingMeterIOS.release.xcconfig */;
 			buildSettings = {
@@ -576,6 +781,44 @@
 			};
 			name = Release;
 		};
+		2761FDD62A4EB02F3BB73483D4EFB0DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AFD439A8B2F079AC8ECBFA073AFC460 /* Pods-FeelingMeterIOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FeelingMeterIOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		342E391E5639AD89CE08ABCC9AA0026A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFE1F6B697450B4A2291E4FCE75526C8 /* Pods-FeelingMeterIOSUITests.debug.xcconfig */;
@@ -601,79 +844,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FeelingMeterIOSUITests/Pods-FeelingMeterIOSUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3D66B47E2E0597E31C850D66C532ED55 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
-				PRODUCT_MODULE_NAME = ReSwift;
-				PRODUCT_NAME = ReSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		51256FCC4A393DCE2BC394F4D10C5D1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AFD439A8B2F079AC8ECBFA073AFC460 /* Pods-FeelingMeterIOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FeelingMeterIOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -719,6 +889,42 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8069942EE6C5631907C2F3671D348F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B91355D4607526A23878A528C59AE72 /* PureLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				PRODUCT_MODULE_NAME = PureLayout;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -792,42 +998,6 @@
 			};
 			name = Debug;
 		};
-		A043589E9C0E3E5FC49A5EBAA31BA98C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
-				PRODUCT_MODULE_NAME = ReSwift;
-				PRODUCT_NAME = ReSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		A5664A7FBB6AE7A130BD8D7147898627 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 650C496318F0192785861E5FDA7C798A /* Pods-FeelingMeterIOSTests.debug.xcconfig */;
@@ -865,6 +1035,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		BE97FF2EF2553A438BF0AF7589C4E650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C247E7A261F51E916ED58E75E4A41B71 /* ReSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
+				PRODUCT_MODULE_NAME = ReSwift;
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -970,20 +1176,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		052E71AFE408F5220D6A677EAD57B25B /* Build configuration list for PBXNativeTarget "Pods-FeelingMeterIOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51256FCC4A393DCE2BC394F4D10C5D1E /* Debug */,
-				1D1EA8C38CCEDB81F50E389728E6C3C0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */,
 				D5F759C82752B2EB010DB3CD3D69707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48CB7AB5180F371086221CD2F79092F0 /* Build configuration list for PBXNativeTarget "ReSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E06BFF15D3570F263D2A9978E5EED8A /* Debug */,
+				BE97FF2EF2553A438BF0AF7589C4E650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -997,20 +1203,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8ABC0E46EDEC6A0CA819F4E27355FD88 /* Build configuration list for PBXNativeTarget "ReSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D66B47E2E0597E31C850D66C532ED55 /* Debug */,
-				A043589E9C0E3E5FC49A5EBAA31BA98C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8E73A45A7D526A743484ECB451538D46 /* Build configuration list for PBXNativeTarget "Pods-FeelingMeterIOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				342E391E5639AD89CE08ABCC9AA0026A /* Debug */,
 				54FBA45E95869312B1CB5A4CD5B9F1BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A9CF39E90838E205601FEA5B4A495E2 /* Build configuration list for PBXNativeTarget "Pods-FeelingMeterIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2761FDD62A4EB02F3BB73483D4EFB0DE /* Debug */,
+				1DE866C4DBEC942ACB8094E1806A8142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1EAA5D8EF035490A59284D6FB842795 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050378BD2557347B2007FF8CFA8F6F40 /* Debug */,
+				8069942EE6C5631907C2F3671D348F07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

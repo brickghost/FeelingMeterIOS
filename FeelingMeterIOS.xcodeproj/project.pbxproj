@@ -10,15 +10,19 @@
 		5B8A619695CA7315AC5F2F9D /* Pods_FeelingMeterIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */; };
 		9B9412C3608636BB49B4455B /* Pods_FeelingMeterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */; };
 		A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8332209C018003B5DF1 /* AppDelegate.swift */; };
-		A2C9B8362209C018003B5DF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8352209C018003B5DF1 /* ViewController.swift */; };
-		A2C9B8392209C018003B5DF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B8372209C018003B5DF1 /* Main.storyboard */; };
 		A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */; };
-		A2C9B83E2209C01A003B5DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83C2209C01A003B5DF1 /* LaunchScreen.storyboard */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
 		A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */; };
 		A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
 		A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
 		A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* MainStateTests.swift */; };
+		A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */; };
+		A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
+		A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
+		A2C9B8752212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
+		A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
+		A2C9B87C2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
+		A2C9B87D2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
 		BE78466C2AEE27685D209F14 /* Pods_FeelingMeterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609125391A2F835719B8F5F /* Pods_FeelingMeterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +51,7 @@
 		975AA906482C371A027853B4 /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
 		A2C9B8302209C018003B5DF1 /* FeelingMeterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingMeterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8332209C018003B5DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2C9B8352209C018003B5DF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2C9B8382209C018003B5DF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A2C9B83D2209C01A003B5DF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2C9B83F2209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C9B8442209C01A003B5DF1 /* FeelingMeterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSTests.swift; sourceTree = "<group>"; };
@@ -60,6 +61,9 @@
 		A2C9B8552209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C9B8632209C8AA003B5DF1 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
 		A2C9B867220B1930003B5DF1 /* MainStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateTests.swift; sourceTree = "<group>"; };
+		A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
+		A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewController.swift; sourceTree = "<group>"; };
 		D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9EC4EF9244B9DC6D8E7D315 /* Pods-FeelingMeterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,12 +136,12 @@
 		A2C9B8322209C018003B5DF1 /* FeelingMeterIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A2C9B8712212F7EE003B5DF1 /* Views */,
+				A2C9B8702212F7E6003B5DF1 /* Models */,
+				A2C9B86F2212F7C1003B5DF1 /* ViewControllers */,
 				A2C9B8622209C883003B5DF1 /* State */,
 				A2C9B8332209C018003B5DF1 /* AppDelegate.swift */,
-				A2C9B8352209C018003B5DF1 /* ViewController.swift */,
-				A2C9B8372209C018003B5DF1 /* Main.storyboard */,
 				A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */,
-				A2C9B83C2209C01A003B5DF1 /* LaunchScreen.storyboard */,
 				A2C9B83F2209C01A003B5DF1 /* Info.plist */,
 			);
 			path = FeelingMeterIOS;
@@ -149,6 +153,7 @@
 				A2C9B866220B18F2003B5DF1 /* State */,
 				A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
+				A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */,
 			);
 			path = FeelingMeterIOSTests;
 			sourceTree = "<group>";
@@ -176,6 +181,29 @@
 				A2C9B867220B1930003B5DF1 /* MainStateTests.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		A2C9B86F2212F7C1003B5DF1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2C9B8702212F7E6003B5DF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2C9B8712212F7EE003B5DF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D953A9BF12F4DC03113C3330 /* Frameworks */ = {
@@ -296,9 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C9B83E2209C01A003B5DF1 /* LaunchScreen.storyboard in Resources */,
 				A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */,
-				A2C9B8392209C018003B5DF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +354,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +442,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C9B8362209C018003B5DF1 /* ViewController.swift in Sources */,
+				A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
+				A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */,
 				A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */,
 				A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */,
 			);
@@ -426,7 +455,10 @@
 			files = (
 				A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */,
 				A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */,
+				A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */,
+				A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */,
 				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
+				A2C9B87C2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +467,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */,
+				A2C9B8752212FA2D003B5DF1 /* FeelingView.swift in Sources */,
+				A2C9B87D2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,25 +486,6 @@
 			targetProxy = A2C9B8502209C01A003B5DF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A2C9B8372209C018003B5DF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2C9B8382209C018003B5DF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A2C9B83C2209C01A003B5DF1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2C9B83D2209C01A003B5DF1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A2C9B8562209C01A003B5DF1 /* Debug */ = {
@@ -602,6 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefu.FeelingMeterIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeelingMeterIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -620,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefu.FeelingMeterIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeelingMeterIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

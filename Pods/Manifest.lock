@@ -1,16 +1,20 @@
 PODS:
+  - PureLayout (3.1.4)
   - ReSwift (4.0.1)
 
 DEPENDENCIES:
+  - PureLayout
   - ReSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - PureLayout
     - ReSwift
 
 SPEC CHECKSUMS:
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
 
-PODFILE CHECKSUM: 094302750883d109cdb8aa80a60493267ba2e9e1
+PODFILE CHECKSUM: d464c0cf6b5685b3c4a134610557354c152d2847
 
 COCOAPODS: 1.5.3
