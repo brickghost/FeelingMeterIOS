@@ -7,14 +7,15 @@
 
 import ReSwift
 import XCTest
+@testable import FeelingMeterIOS
 
 struct EmptyAction: Action { }
 
-class MainStateTests: XCTestCase {
+class AppStateTests: XCTestCase {
 
-    var  state = MainState()
+    var  state = AppState()
     override func setUp() {
-        state = mainReducer(action: EmptyAction(), state: nil)
+        state = reducer(action: EmptyAction(), state: nil)
     }
     
     override func tearDown() {
@@ -22,7 +23,7 @@ class MainStateTests: XCTestCase {
     }
     
     func testReducerReturnsMainState() {
-        XCTAssertEqual(state, MainState())
+        XCTAssertEqual(state, AppState())
     }
     
     func testDefaultFeeling() {
@@ -30,7 +31,7 @@ class MainStateTests: XCTestCase {
     }
     
     func testChangeFeeling() {
-        state = mainReducer(action: changeFeeling(feeling: .great), state: nil)
+        state = reducer(action: changeFeeling(feeling: .great), state: nil)
         XCTAssertEqual(state.feeling, .great)
     }
 }

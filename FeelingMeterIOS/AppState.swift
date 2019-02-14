@@ -1,5 +1,5 @@
 //
-//  MainState.swift
+//  AppState.swift
 //  FeelingMeterIOS
 //
 //  Created by Andrew Bricker on 2/6/19.
@@ -10,7 +10,7 @@ import Foundation
 import ReSwift
 
 // MARK:- STATE
-struct MainState: StateType, Equatable {
+struct AppState: StateType, Equatable {
     var feeling: Feeling
     
     init() {
@@ -19,8 +19,8 @@ struct MainState: StateType, Equatable {
 }
 
 // MARK:- REDUCERS
-func mainReducer(action: Action, state: MainState?) -> MainState {
-    var state = state ?? MainState()
+func reducer(action: Action, state: AppState?) -> AppState {
+    var state = state ?? AppState()
     
     switch action {
     case let feeling as changeFeeling:
@@ -37,8 +37,13 @@ struct changeFeeling: Action {
     var feeling: Feeling
 }
 
-// MARK: MODEL/OPTIONS
+// MARK:- STORE
+let store = Store(
+    reducer: reducer,
+    state: AppState(),
+    middleware: [])
 
+// MARK: MODEL/OPTIONS
 enum Feeling: String {
     case terrible = "Existence is pain"
     case notSoGood = "I can't adult today"

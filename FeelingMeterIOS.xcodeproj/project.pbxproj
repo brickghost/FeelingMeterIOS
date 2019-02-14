@@ -13,9 +13,8 @@
 		A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
 		A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */; };
-		A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
-		A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* MainState.swift */; };
-		A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* MainStateTests.swift */; };
+		A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* AppState.swift */; };
+		A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* AppStateTests.swift */; };
 		A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */; };
 		A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
 		A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
@@ -59,8 +58,8 @@
 		A2C9B84F2209C01A003B5DF1 /* FeelingMeterIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSUITests.swift; sourceTree = "<group>"; };
 		A2C9B8552209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2C9B8632209C8AA003B5DF1 /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		A2C9B867220B1930003B5DF1 /* MainStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStateTests.swift; sourceTree = "<group>"; };
+		A2C9B8632209C8AA003B5DF1 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A2C9B867220B1930003B5DF1 /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
 		A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +138,9 @@
 				A2C9B8712212F7EE003B5DF1 /* Views */,
 				A2C9B8702212F7E6003B5DF1 /* Models */,
 				A2C9B86F2212F7C1003B5DF1 /* ViewControllers */,
-				A2C9B8622209C883003B5DF1 /* State */,
 				A2C9B8332209C018003B5DF1 /* AppDelegate.swift */,
 				A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */,
+				A2C9B8632209C8AA003B5DF1 /* AppState.swift */,
 				A2C9B83F2209C01A003B5DF1 /* Info.plist */,
 			);
 			path = FeelingMeterIOS;
@@ -150,8 +149,8 @@
 		A2C9B8472209C01A003B5DF1 /* FeelingMeterIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				A2C9B866220B18F2003B5DF1 /* State */,
 				A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */,
+				A2C9B867220B1930003B5DF1 /* AppStateTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
 				A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */,
 			);
@@ -165,22 +164,6 @@
 				A2C9B8552209C01A003B5DF1 /* Info.plist */,
 			);
 			path = FeelingMeterIOSUITests;
-			sourceTree = "<group>";
-		};
-		A2C9B8622209C883003B5DF1 /* State */ = {
-			isa = PBXGroup;
-			children = (
-				A2C9B8632209C8AA003B5DF1 /* MainState.swift */,
-			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		A2C9B866220B18F2003B5DF1 /* State */ = {
-			isa = PBXGroup;
-			children = (
-				A2C9B867220B1930003B5DF1 /* MainStateTests.swift */,
-			);
-			path = State;
 			sourceTree = "<group>";
 		};
 		A2C9B86F2212F7C1003B5DF1 /* ViewControllers */ = {
@@ -444,7 +427,7 @@
 			files = (
 				A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 				A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */,
-				A2C9B8642209C8AA003B5DF1 /* MainState.swift in Sources */,
+				A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */,
 				A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,8 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C9B86A220B1E37003B5DF1 /* MainStateTests.swift in Sources */,
-				A2C9B8652209C8AA003B5DF1 /* MainState.swift in Sources */,
+				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
 				A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */,
 				A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */,
 				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
