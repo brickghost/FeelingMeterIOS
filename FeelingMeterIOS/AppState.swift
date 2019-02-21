@@ -37,11 +37,10 @@ struct changeFeeling: Action {
     var feeling: Feeling
 }
 
-// MARK:- STORE
 let store = Store(
     reducer: reducer,
-    state: AppState(),
-    middleware: [])
+    state: AppState())
+
 
 // MARK: MODEL/OPTIONS
 enum Feeling: String {

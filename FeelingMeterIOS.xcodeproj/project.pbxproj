@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5B8A619695CA7315AC5F2F9D /* Pods_FeelingMeterIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */; };
 		9B9412C3608636BB49B4455B /* Pods_FeelingMeterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */; };
+		A29E46652215A711009FB179 /* FeelingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */; };
+		A29E46682215A726009FB179 /* FeelingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E46662215A725009FB179 /* FeelingViewTests.swift */; };
+		A29E46692215BCEB009FB179 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* AppState.swift */; };
+		A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
+		A29E466B2215C257009FB179 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
 		A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8332209C018003B5DF1 /* AppDelegate.swift */; };
 		A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
@@ -17,11 +22,7 @@
 		A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* AppStateTests.swift */; };
 		A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */; };
 		A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
-		A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
-		A2C9B8752212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
 		A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
-		A2C9B87C2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
-		A2C9B87D2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
 		BE78466C2AEE27685D209F14 /* Pods_FeelingMeterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609125391A2F835719B8F5F /* Pods_FeelingMeterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		68E3D3A5BC56B93FB348BB88 /* Pods-FeelingMeterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		754602405B8B4556937A85B0 /* Pods-FeelingMeterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		975AA906482C371A027853B4 /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
+		A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewControllerTests.swift; sourceTree = "<group>"; };
+		A29E46662215A725009FB179 /* FeelingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewTests.swift; sourceTree = "<group>"; };
 		A2C9B8302209C018003B5DF1 /* FeelingMeterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingMeterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8332209C018003B5DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +113,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A29E46622215A6D8009FB179 /* Feeling */ = {
+			isa = PBXGroup;
+			children = (
+				A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */,
+				A29E46662215A725009FB179 /* FeelingViewTests.swift */,
+			);
+			path = Feeling;
+			sourceTree = "<group>";
+		};
 		A2C9B8272209C018003B5DF1 = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +147,7 @@
 		A2C9B8322209C018003B5DF1 /* FeelingMeterIOS */ = {
 			isa = PBXGroup;
 			children = (
-				A2C9B8712212F7EE003B5DF1 /* Views */,
-				A2C9B8702212F7E6003B5DF1 /* Models */,
-				A2C9B86F2212F7C1003B5DF1 /* ViewControllers */,
+				A2C9B86F2212F7C1003B5DF1 /* Feeling */,
 				A2C9B8332209C018003B5DF1 /* AppDelegate.swift */,
 				A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */,
 				A2C9B8632209C8AA003B5DF1 /* AppState.swift */,
@@ -149,6 +159,7 @@
 		A2C9B8472209C01A003B5DF1 /* FeelingMeterIOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A29E46622215A6D8009FB179 /* Feeling */,
 				A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */,
 				A2C9B867220B1930003B5DF1 /* AppStateTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
@@ -166,27 +177,13 @@
 			path = FeelingMeterIOSUITests;
 			sourceTree = "<group>";
 		};
-		A2C9B86F2212F7C1003B5DF1 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		A2C9B8702212F7E6003B5DF1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A2C9B8712212F7EE003B5DF1 /* Views */ = {
+		A2C9B86F2212F7C1003B5DF1 /* Feeling */ = {
 			isa = PBXGroup;
 			children = (
 				A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */,
+				A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */,
 			);
-			path = Views;
+			path = Feeling;
 			sourceTree = "<group>";
 		};
 		D953A9BF12F4DC03113C3330 /* Frameworks */ = {
@@ -436,11 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29E46682215A726009FB179 /* FeelingViewTests.swift in Sources */,
+				A29E466B2215C257009FB179 /* FeelingView.swift in Sources */,
 				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
+				A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */,
 				A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */,
-				A2C9B8742212FA2D003B5DF1 /* FeelingView.swift in Sources */,
+				A29E46692215BCEB009FB179 /* AppState.swift in Sources */,
+				A29E46652215A711009FB179 /* FeelingViewControllerTests.swift in Sources */,
 				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
-				A2C9B87C2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,8 +449,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */,
-				A2C9B8752212FA2D003B5DF1 /* FeelingView.swift in Sources */,
-				A2C9B87D2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,9 @@ class FeelingView: UIView {
     var shouldSetupConstraints = true
     
     let feelingLabel: UILabel = UILabel(frame: CGRect.zero)
-    
     let screenSize = UIScreen.main.bounds
     
     override init(frame: CGRect) {
-        
         super.init(frame: frame)
         feelingLabel.text = "Feeling"
         self.backgroundColor = UIColor.white
