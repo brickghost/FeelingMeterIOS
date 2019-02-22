@@ -14,6 +14,9 @@
 		A29E46692215BCEB009FB179 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* AppState.swift */; };
 		A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
 		A29E466B2215C257009FB179 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
+		A29E466D221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */; };
+		A29E466E221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */; };
+		A29E466F221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */; };
 		A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8332209C018003B5DF1 /* AppDelegate.swift */; };
 		A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
@@ -51,6 +54,7 @@
 		975AA906482C371A027853B4 /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
 		A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewControllerTests.swift; sourceTree = "<group>"; };
 		A29E46662215A725009FB179 /* FeelingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewTests.swift; sourceTree = "<group>"; };
+		A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingRatingControlView.swift; sourceTree = "<group>"; };
 		A2C9B8302209C018003B5DF1 /* FeelingMeterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingMeterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8332209C018003B5DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,8 +184,9 @@
 		A2C9B86F2212F7C1003B5DF1 /* Feeling */ = {
 			isa = PBXGroup;
 			children = (
-				A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */,
 				A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */,
+				A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */,
+				A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */,
 			);
 			path = Feeling;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
+				A29E466D221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */,
 				A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */,
 				A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */,
 				A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */,
@@ -434,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A29E46682215A726009FB179 /* FeelingViewTests.swift in Sources */,
+				A29E466E221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */,
 				A29E466B2215C257009FB179 /* FeelingView.swift in Sources */,
 				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
 				A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */,
@@ -449,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */,
+				A29E466F221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

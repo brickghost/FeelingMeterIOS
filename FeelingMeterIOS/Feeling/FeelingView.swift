@@ -7,30 +7,36 @@
 //
 
 import UIKit
-import PureLayout
 
 class FeelingView: UIView {
-    var shouldSetupConstraints = true
+    
+    //MARK: Properties
+    var feelingRatingControlView = FeelingRatingControlView(frame: CGRect.zero)
     
     let feelingLabel: UILabel = UILabel(frame: CGRect.zero)
-    let screenSize = UIScreen.main.bounds
     
+    //MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         feelingLabel.text = "Feeling"
-        self.backgroundColor = UIColor.white
-        self.addSubview(feelingLabel)
+        feelingLabel.textAlignment = .center
+        
+        let stack = UIStackView(frame: frame)
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 50
+        stack.distribution = .fill
+        stack.addArrangedSubview(feelingRatingControlView)
+        stack.addArrangedSubview(feelingLabel)
+        self.addSubview(stack)
+        
+        stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func updateConstraints() {
-        if(shouldSetupConstraints) {
-            feelingLabel.autoCenterInSuperview()
-            shouldSetupConstraints = false
-        }
-        super.updateConstraints()
-    }
 }
