@@ -12,7 +12,6 @@ class FeelingRatingControlView: UIView {
     
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-    
     var rating = 1
 
     //MARK: Initialization
@@ -36,12 +35,14 @@ class FeelingRatingControlView: UIView {
         stack.spacing = 10
         
         for _ in 0..<5 {
-            let button = UIButton()
+            let button = UIButton(type: .custom)
+            let starEmpty = UIImage(named: "StarEmpty")
             
-            button.backgroundColor = UIColor.yellow
+            
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
             button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+            button.setImage(starEmpty, for: .normal)
             
             stack.addArrangedSubview(button)
             
@@ -51,6 +52,6 @@ class FeelingRatingControlView: UIView {
         self.addSubview(stack)
         
         stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true 
+        stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }

@@ -18,7 +18,7 @@
 		A29E466E221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */; };
 		A29E466F221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */; };
 		A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8332209C018003B5DF1 /* AppDelegate.swift */; };
-		A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */; };
+		A2C9B83B2209C01A003B5DF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Images.xcassets */; };
 		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
 		A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */; };
 		A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* AppState.swift */; };
@@ -57,7 +57,7 @@
 		A29E466C221EE32B009FB179 /* FeelingRatingControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingRatingControlView.swift; sourceTree = "<group>"; };
 		A2C9B8302209C018003B5DF1 /* FeelingMeterIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingMeterIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8332209C018003B5DF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2C9B83A2209C01A003B5DF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2C9B83F2209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C9B8442209C01A003B5DF1 /* FeelingMeterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSTests.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			children = (
 				A2C9B86F2212F7C1003B5DF1 /* Feeling */,
 				A2C9B8332209C018003B5DF1 /* AppDelegate.swift */,
-				A2C9B83A2209C01A003B5DF1 /* Assets.xcassets */,
+				A2C9B83A2209C01A003B5DF1 /* Images.xcassets */,
 				A2C9B8632209C8AA003B5DF1 /* AppState.swift */,
 				A2C9B83F2209C01A003B5DF1 /* Info.plist */,
 			);
@@ -309,7 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C9B83B2209C01A003B5DF1 /* Assets.xcassets in Resources */,
+				A2C9B83B2209C01A003B5DF1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
