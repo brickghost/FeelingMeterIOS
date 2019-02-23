@@ -13,6 +13,9 @@ class FeelingRatingControlView: UIView {
     //MARK: Properties
     private var ratingButtons = [UIButton]()
     var rating = 1
+    
+    let starEmpty = UIImage(named: "StarEmpty")
+    let starFull = UIImage(named: "StarFull")
 
     //MARK: Initialization
     override init(frame: CGRect) {
@@ -34,15 +37,12 @@ class FeelingRatingControlView: UIView {
         stack.distribution = .fill
         stack.spacing = 10
         
-        for _ in 0..<5 {
+        for _ in 1..<6 {
             let button = UIButton(type: .custom)
-            let starEmpty = UIImage(named: "StarEmpty")
-            
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
             button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
-            button.setImage(starEmpty, for: .normal)
             
             stack.addArrangedSubview(button)
             
@@ -53,5 +53,14 @@ class FeelingRatingControlView: UIView {
         
         stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        setButtonImages()
+    }
+    
+    func setButtonImages() {
+        for i in 0..<5 {
+            let button = ratingButtons[i]
+            let starImage = i <= rating - 1 ? starFull : starEmpty
+            button.setImage(starImage, for: .normal)
+        }
     }
 }
