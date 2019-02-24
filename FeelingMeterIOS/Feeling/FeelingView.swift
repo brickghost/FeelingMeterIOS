@@ -35,7 +35,6 @@ class FeelingView: UIView {
         stack.widthAnchor.constraint(equalToConstant: 500).isActive = true
         stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-    
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -7,7 +7,9 @@ use_frameworks!
 
 # Pods for FeelingMeterIOS
 pod 'ReSwift'
+pod 'RxSwift'
 pod 'PureLayout'
+pod 'RxCocoa'
 
 target 'FeelingMeterIOSTests' do
 inherit! :search_paths

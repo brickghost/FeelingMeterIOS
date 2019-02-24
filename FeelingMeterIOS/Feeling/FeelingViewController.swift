@@ -8,6 +8,8 @@
 
 import UIKit
 import ReSwift
+import RxSwift
+import RxCocoa
 
 class FeelingViewController: UIViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
@@ -15,7 +17,7 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
     var feelingRatingControlerView = FeelingRatingControlView()
-    
+    var disposeBag = DisposeBag()
     //MARK: Initialization
     override func loadView() {
         super.loadView()        
@@ -30,6 +32,11 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     
     override func viewDidLoad() {
         self.feelingRatingControlerView = self.profile.feelingRatingControlView
+        self.feelingRatingControlerView.ratingButtons.forEach { (button) in
+            button.rx.tap.subscribe(onNext: {[ weak self ] in
+                print("button tapped \(button.tag)")
+            }).disposed(by: disposeBag)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
