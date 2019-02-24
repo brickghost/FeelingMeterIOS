@@ -38,12 +38,14 @@ class FeelingRatingControlView: UIView {
         stack.distribution = .fill
         stack.spacing = 10
         
-        for _ in 1..<6 {
+        for i in 1..<6 {
             let button = UIButton(type: .custom)
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
             button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+            button.tag = i
+            button.addTarget(nil, action: #selector(buttonAction), for: .touchUpInside)
             
             stack.addArrangedSubview(button)
             
@@ -51,9 +53,16 @@ class FeelingRatingControlView: UIView {
         }
         
         self.addSubview(stack)
-        
+        stack.topAnchor.constraint(equalTo: self.topAnchor)
+        stack.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        stack.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        stack.trailingAnchor.constraint(equalTo: self.leadingAnchor)
         stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+    }
+    
+    @objc func buttonAction(_ sender: UIButton){
+        print("button tapped")
     }
     
     func setButtonImages(rating: Int) {

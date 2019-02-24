@@ -31,6 +31,8 @@ class FeelingView: UIView {
         stack.addArrangedSubview(feelingLabel)
         self.addSubview(stack)
         
+        stack.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        stack.widthAnchor.constraint(equalToConstant: 500).isActive = true
         stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     
