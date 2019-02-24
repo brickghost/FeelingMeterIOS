@@ -14,7 +14,7 @@ struct AppState: StateType, Equatable {
     var feeling: Feeling
     
     init() {
-        self.feeling = .terrible
+        self.feeling = .meh
     }
 }
 
@@ -43,7 +43,7 @@ let store = Store(
 
 
 // MARK: MODEL/OPTIONS
-enum Feeling: String {
+enum Feeling: String, CaseIterable {
     case terrible = "Existence is pain"
     case notSoGood = "I can't adult today"
     case meh = "I just want my rug, man"

@@ -14,6 +14,7 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
+    var feelingRatingControlerView = FeelingRatingControlView()
     
     //MARK: Initialization
     override func loadView() {
@@ -27,9 +28,8 @@ class FeelingViewController: UIViewController, StoreSubscriber {
         profile.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true        
     }
     
-    //MARK: Private Methods
-    func newState(state: FeelingViewController.StoreSubscriberStateType) {
-        self.profile.feelingLabel.text = state.feeling.rawValue
+    override func viewDidLoad() {
+        self.feelingRatingControlerView = self.profile.feelingRatingControlView
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,5 +38,20 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     
     override func viewWillDisappear(_ animated: Bool) {
         store.unsubscribe(self)
+    }
+    
+    //MARK: Private Methods
+    func newState(state: FeelingViewController.StoreSubscriberStateType) {
+        updateFeelingLabel(feeling: state.feeling)
+        updateFeelingRatingControl(feeling: state.feeling)
+    }
+    
+    func updateFeelingLabel(feeling: Feeling) {
+        self.profile.feelingLabel.text = feeling.rawValue
+    }
+    
+    func updateFeelingRatingControl(feeling: Feeling) {
+        let rating = Feeling.allCases.firstIndex(of: feeling) ?? 1
+        feelingRatingControlerView.setButtonImages(rating: rating + 1)
     }
 }

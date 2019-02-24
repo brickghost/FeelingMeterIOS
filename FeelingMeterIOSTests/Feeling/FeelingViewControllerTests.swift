@@ -14,14 +14,29 @@ class FeelingViewControllerTests: XCTestCase {
     private var testObject: FeelingViewController!
     private var state: AppState = AppState()
     
+    class MockFeelingRatingControlView: FeelingRatingControlView {
+        var setButtonImagesCalled = false
+        
+        override func setButtonImages(rating: Int) {
+            setButtonImagesCalled = true
+        }
+    }
+    
     override func setUp() {
         testObject = FeelingViewController()
+        state.feeling = .meh
+        testObject.newState(state: state)
     }
 
-    func testShouldDisplayFeelingFromTheStore() {
-        state.feeling = .great
+    func testVCShouldPopulateFeelingLabelWithFeelingFromTheStore() {
+        XCTAssertEqual("I just want my rug, man", testObject.profile.feelingLabel.text)
+    }
+    
+    func testVCShouldCallSetButtonImagesMethodInFeelingRatingControlBasedOnFeelingFromTheStore() {
+        let mockFeelingRatingControlView = MockFeelingRatingControlView()
+        testObject.feelingRatingControlerView = mockFeelingRatingControlView
+        state.feeling = .meh
         testObject.newState(state: state)
-        
-        XCTAssertEqual("I can't feel my face", testObject.profile.feelingLabel.text)
+        XCTAssertTrue(mockFeelingRatingControlView.setButtonImagesCalled)
     }
 }

@@ -12,16 +12,17 @@ class FeelingView: UIView {
     
     //MARK: Properties
     var feelingRatingControlView = FeelingRatingControlView(frame: CGRect.zero)
+    var stack = UIStackView()
     
     let feelingLabel: UILabel = UILabel(frame: CGRect.zero)
-    
+
     //MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         feelingLabel.text = "Feeling"
         feelingLabel.textAlignment = .center
         
-        let stack = UIStackView(frame: frame)
+        stack = UIStackView(frame: frame)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.spacing = 50
