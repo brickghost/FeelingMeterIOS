@@ -9,18 +9,18 @@
 import ReSwift
 import XCTest
 @testable import FeelingMeterIOS
+
+class MockFeelingRatingControlView: FeelingRatingControlView {
+    var setButtonImagesCalled = false
+    
+    override func setButtonImages(rating: Int) {
+        setButtonImagesCalled = true
+    }
+}
                              
 class FeelingViewControllerTests: XCTestCase {
     private var testObject: FeelingViewController!
     private var state: AppState = AppState()
-    
-    class MockFeelingRatingControlView: FeelingRatingControlView {
-        var setButtonImagesCalled = false
-        
-        override func setButtonImages(rating: Int) {
-            setButtonImagesCalled = true
-        }
-    }
     
     override func setUp() {
         testObject = FeelingViewController()

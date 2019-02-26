@@ -34,6 +34,8 @@ class FeelingViewController: UIViewController, StoreSubscriber {
         self.feelingRatingControlerView = self.profile.feelingRatingControlView
         self.feelingRatingControlerView.ratingButtons.forEach { (button) in
             button.rx.tap.subscribe(onNext: {[ weak self ] in
+                let newFeeling = self?.getFeelingIndex(index: button.tag - 1)
+                store.dispatch(changeFeeling(feeling: newFeeling ?? .meh))
                 print("button tapped \(button.tag)")
             }).disposed(by: disposeBag)
         }
@@ -58,7 +60,15 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     }
     
     func updateFeelingRatingControl(feeling: Feeling) {
-        let rating = Feeling.allCases.firstIndex(of: feeling) ?? 1
+        let rating = calcRating(feeling: feeling)
         feelingRatingControlerView.setButtonImages(rating: rating + 1)
+    }
+    
+    func calcRating(feeling: Feeling) -> Int {
+        return Feeling.allCases.firstIndex(of: feeling) ?? 1
+    }
+    
+    func getFeelingIndex(index: Int) -> Feeling {
+        return Feeling.allCases[index]
     }
 }
