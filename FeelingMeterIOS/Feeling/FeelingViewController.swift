@@ -16,9 +16,21 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
-    var feelingRatingControlerView = FeelingRatingControlView()
+    var feelingRatingControlerView: FeelingRatingControlView
     var disposeBag = DisposeBag()
+    var appStore = store
+    
     //MARK: Initialization
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.feelingRatingControlerView = self.profile.feelingRatingControlView
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.feelingRatingControlerView.delegate = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         super.loadView()        
         self.view.addSubview(profile)
@@ -28,17 +40,6 @@ class FeelingViewController: UIViewController, StoreSubscriber {
         profile.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         profile.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         profile.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true        
-    }
-    
-    override func viewDidLoad() {
-        self.feelingRatingControlerView = self.profile.feelingRatingControlView
-        self.feelingRatingControlerView.ratingButtons.forEach { (button) in
-            button.rx.tap.subscribe(onNext: {[ weak self ] in
-                let newFeeling = self?.getFeelingIndex(index: button.tag - 1)
-                store.dispatch(changeFeeling(feeling: newFeeling ?? .meh))
-                print("button tapped \(button.tag)")
-            }).disposed(by: disposeBag)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +69,13 @@ class FeelingViewController: UIViewController, StoreSubscriber {
         return Feeling.allCases.firstIndex(of: feeling) ?? 1
     }
     
-    func getFeelingIndex(index: Int) -> Feeling {
+    func getFeelingByIndex(index: Int) -> Feeling {
         return Feeling.allCases[index]
+    }
+}
+
+extension FeelingViewController: ButtonTap {
+    func buttonTapped(index: Int) {
+        self.appStore.dispatch(ChangeFeelingAction(feeling: getFeelingByIndex(index: index)))
     }
 }

@@ -10,6 +10,17 @@ import ReSwift
 import XCTest
 @testable import FeelingMeterIOS
 
+class MockStore: Store<AppState> {
+    var dispatchWasCalled = false
+    var dispatchedActions: [Action] = []
+    
+    override func dispatch(_ action: Action) {
+            print("TEST dispatchFunction called\(action)")
+            dispatchWasCalled = true
+            dispatchedActions.append(action)
+    }
+}
+
 class MockFeelingRatingControlView: FeelingRatingControlView {
     var setButtonImagesCalled = false
     
@@ -39,4 +50,22 @@ class FeelingViewControllerTests: XCTestCase {
         testObject.newState(state: state)
         XCTAssertTrue(mockFeelingRatingControlView.setButtonImagesCalled)
     }
+    
+    func testVCShouldDispatchRatingToStoreWhenRatingControlIsTapped() {
+        let mockstore = MockStore(reducer: reducer, state: state)
+        testObject.appStore = mockstore
+        let button: UIButton = testObject.profile.feelingRatingControlView.ratingButtons[1]
+        button.sendActions(for: .touchUpInside)
+        
+        XCTAssertTrue(mockstore.dispatchWasCalled)
+        XCTAssertEqual(mockstore.dispatchedActions.count, 1)
+        
+        let action: ChangeFeelingAction = mockstore.dispatchedActions[0] as! ChangeFeelingAction
+        XCTAssertEqual(action.feeling, .notSoGood)
+    }
+    
+    func testVCShouldNotDspatchRatingToStoreWhenRatingControlIsTappedWithSameRatingAsCurrent() {
+        
+    }
+
 }

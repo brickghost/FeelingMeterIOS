@@ -27,11 +27,11 @@ class AppStateTests: XCTestCase {
     }
     
     func testDefaultFeeling() {
-        XCTAssertEqual(state.feeling, .terrible)
+        XCTAssertEqual(state.feeling, .meh)
     }
     
     func testChangeFeeling() {
-        state = reducer(action: changeFeeling(feeling: .great), state: nil)
+        state = reducer(action: ChangeFeelingAction(feeling: .great), state: nil)
         XCTAssertEqual(state.feeling, .great)
     }
 }

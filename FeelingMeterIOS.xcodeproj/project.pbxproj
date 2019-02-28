@@ -26,6 +26,7 @@
 		A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */; };
 		A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
 		A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */; };
+		A2E2FE162226CD4700D7BCA5 /* FeelingRatingControlViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2FE152226CD4700D7BCA5 /* FeelingRatingControlViewTests.swift */; };
 		BE78466C2AEE27685D209F14 /* Pods_FeelingMeterIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5609125391A2F835719B8F5F /* Pods_FeelingMeterIOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingView.swift; sourceTree = "<group>"; };
 		A2C9B87A2213041F003B5DF1 /* FeelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewController.swift; sourceTree = "<group>"; };
+		A2E2FE152226CD4700D7BCA5 /* FeelingRatingControlViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingRatingControlViewTests.swift; sourceTree = "<group>"; };
 		D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9EC4EF9244B9DC6D8E7D315 /* Pods-FeelingMeterIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeelingMeterIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			children = (
 				A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */,
 				A29E46662215A725009FB179 /* FeelingViewTests.swift */,
+				A2E2FE152226CD4700D7BCA5 /* FeelingRatingControlViewTests.swift */,
 			);
 			path = Feeling;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				A29E466E221EE32B009FB179 /* FeelingRatingControlView.swift in Sources */,
 				A29E466B2215C257009FB179 /* FeelingView.swift in Sources */,
 				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
+				A2E2FE162226CD4700D7BCA5 /* FeelingRatingControlViewTests.swift in Sources */,
 				A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */,
 				A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */,
 				A29E46692215BCEB009FB179 /* AppState.swift in Sources */,

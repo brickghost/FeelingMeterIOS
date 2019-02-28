@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ButtonTap: class {
+    func buttonTapped(index: Int)
+}
+
 class FeelingRatingControlView: UIView {
     
     //MARK: Properties
@@ -17,6 +21,7 @@ class FeelingRatingControlView: UIView {
     let starFull = UIImage(named: "StarFull")
     
     var stack = UIStackView()
+    weak var delegate: ButtonTap?
 
     //MARK: Initialization
     override init(frame: CGRect) {
@@ -44,7 +49,8 @@ class FeelingRatingControlView: UIView {
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
             button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
-            button.tag = i
+            button.tag = i - 1
+            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             
             stack.addArrangedSubview(button)
             
@@ -66,5 +72,10 @@ class FeelingRatingControlView: UIView {
             let starImage = i <= rating - 1 ? starFull : starEmpty
             button.setImage(starImage, for: .normal)
         }
+    }
+    
+    @objc func buttonAction(_ sender: UIButton) {
+        print("button tapped")
+        delegate?.buttonTapped(index: sender.tag)
     }
 }

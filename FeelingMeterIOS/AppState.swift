@@ -23,7 +23,7 @@ func reducer(action: Action, state: AppState?) -> AppState {
     var state = state ?? AppState()
     
     switch action {
-    case let feeling as changeFeeling:
+    case let feeling as ChangeFeelingAction:
         state.feeling = feeling.feeling
     default:
         return state
@@ -33,7 +33,7 @@ func reducer(action: Action, state: AppState?) -> AppState {
 }
 
 // MARK:- ACTIONS
-struct changeFeeling: Action {
+struct ChangeFeelingAction: Action {
     var feeling: Feeling
 }
 
@@ -47,6 +47,6 @@ enum Feeling: String, CaseIterable {
     case terrible = "Existence is pain"
     case notSoGood = "I can't adult today"
     case meh = "I just want my rug, man"
-    case ok = "Just another day in paradise"
+    case ok = "Living the Dream"
     case great = "I can't feel my face"
 }
