@@ -8,37 +8,85 @@
 
 import UIKit
 
+
+
 class FeelingView: UIView {
     
     //MARK: Properties
-    var feelingRatingControlView = FeelingRatingControlView(frame: CGRect.zero)
-    var stack = UIStackView()
+    weak var delegate: ButtonTap?
     
-    let feelingLabel: UILabel = UILabel(frame: CGRect.zero)
+    var feelingViewStack = UIStackView()
+    var ratingControlStack = UIStackView()
+    var feelingLabel: UILabel = UILabel()
+    var ratingButtons = [UIButton]()
+    
+    let starEmpty = UIImage(named: "StarEmpty")
+    let starFull = UIImage(named: "StarFull")
 
     //MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         feelingLabel.text = "Feeling"
         feelingLabel.textAlignment = .center
         
-        stack = UIStackView(frame: frame)
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.axis = .vertical
-        stack.spacing = 50
-        stack.distribution = .fill
-        stack.addArrangedSubview(feelingRatingControlView)
-        stack.addArrangedSubview(feelingLabel)
-        self.addSubview(stack)
+        feelingViewStack = UIStackView(frame: frame)
+        ratingControlStack = UIStackView(frame: frame)
         
-        stack.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        stack.widthAnchor.constraint(equalToConstant: 500).isActive = true
-        stack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        stack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        addButtons()
+        
+        feelingViewStack.addArrangedSubview(ratingControlStack)
+        feelingViewStack.addArrangedSubview(feelingLabel)
+        self.addSubview(feelingViewStack)
+
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    private func addButtons() {
+        for i in 1..<6 {
+            let button = UIButton(type: .custom)
+            
+            button.tag = i - 1
+            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            
+            ratingControlStack.addArrangedSubview(button)
+            
+            ratingButtons.append(button)
+        }
+    }
+    
+    private func setupConstraints() {
+        ratingControlStack.translatesAutoresizingMaskIntoConstraints = false
+        ratingControlStack.topAnchor.constraint(equalTo: self.topAnchor)
+        ratingControlStack.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ratingControlStack.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        ratingControlStack.trailingAnchor.constraint(equalTo: self.leadingAnchor)
+        ratingControlStack.axis = .horizontal
+        ratingControlStack.distribution = .fillEqually
+        ratingControlStack.spacing = 25
+        
+        
+        feelingViewStack.translatesAutoresizingMaskIntoConstraints = false
+        feelingViewStack.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        feelingViewStack.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        feelingViewStack.axis = .vertical
+        feelingViewStack.spacing = 50
+        feelingViewStack.distribution = .fill
+    }
+    
+    func setButtonImages(rating: Int) {
+        for i in 0..<5 {
+            let button = ratingButtons[i]
+            let starImage = i <= rating - 1 ? starFull : starEmpty
+            button.setImage(starImage, for: .normal)
+        }
+    }
+    
+    @objc func buttonAction(_ sender: UIButton) {
+        delegate?.buttonTapped(index: sender.tag)
+    }
 }

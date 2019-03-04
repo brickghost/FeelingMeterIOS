@@ -11,20 +11,22 @@ import ReSwift
 import RxSwift
 import RxCocoa
 
+protocol ButtonTap: class {
+    func buttonTapped(index: Int)
+}
+
 class FeelingViewController: UIViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
-    var feelingRatingControlerView: FeelingRatingControlView
     var disposeBag = DisposeBag()
     var appStore = store
     
     //MARK: Initialization
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        self.feelingRatingControlerView = self.profile.feelingRatingControlView
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.feelingRatingControlerView.delegate = self
+        self.profile.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,7 +64,7 @@ class FeelingViewController: UIViewController, StoreSubscriber {
     
     func updateFeelingRatingControl(feeling: Feeling) {
         let rating = calcRating(feeling: feeling)
-        feelingRatingControlerView.setButtonImages(rating: rating + 1)
+        self.profile.setButtonImages(rating: rating + 1)
     }
     
     func calcRating(feeling: Feeling) -> Int {

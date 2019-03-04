@@ -21,7 +21,7 @@ class MockStore: Store<AppState> {
     }
 }
 
-class MockFeelingRatingControlView: FeelingRatingControlView {
+class MockFeelingView: FeelingView {
     var setButtonImagesCalled = false
     
     override func setButtonImages(rating: Int) {
@@ -44,17 +44,17 @@ class FeelingViewControllerTests: XCTestCase {
     }
     
     func testVCShouldCallSetButtonImagesMethodInFeelingRatingControlBasedOnFeelingFromTheStore() {
-        let mockFeelingRatingControlView = MockFeelingRatingControlView()
-        testObject.feelingRatingControlerView = mockFeelingRatingControlView
+        let mockFeelingView = MockFeelingView()
+        testObject.profile = mockFeelingView
         state.feeling = .meh
         testObject.newState(state: state)
-        XCTAssertTrue(mockFeelingRatingControlView.setButtonImagesCalled)
+        XCTAssertTrue(mockFeelingView.setButtonImagesCalled)
     }
     
     func testVCShouldDispatchRatingToStoreWhenRatingControlIsTapped() {
         let mockstore = MockStore(reducer: reducer, state: state)
         testObject.appStore = mockstore
-        let button: UIButton = testObject.profile.feelingRatingControlView.ratingButtons[1]
+        let button: UIButton = testObject.profile.ratingButtons[1]
         button.sendActions(for: .touchUpInside)
         
         XCTAssertTrue(mockstore.dispatchWasCalled)
