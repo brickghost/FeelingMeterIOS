@@ -78,6 +78,10 @@ class FeelingViewController: UIViewController, StoreSubscriber {
 
 extension FeelingViewController: ButtonTap {
     func buttonTapped(index: Int) {
-        self.appStore.dispatch(ChangeFeelingAction(feeling: getFeelingByIndex(index: index)))
+        let clickedFeeling = getFeelingByIndex(index: index)
+        if(clickedFeeling == store.state.feeling) {
+            return
+        }
+        self.appStore.dispatch(ChangeFeelingAction(feeling: clickedFeeling))
     }
 }

@@ -65,7 +65,13 @@ class FeelingViewControllerTests: XCTestCase {
     }
     
     func testVCShouldNotDspatchRatingToStoreWhenRatingControlIsTappedWithSameRatingAsCurrent() {
+        let mockstore = MockStore(reducer: reducer, state: state)
+        testObject.appStore = mockstore
+        let button: UIButton = testObject.profile.ratingButtons[2]
+        button.sendActions(for: .touchUpInside)
         
+        XCTAssertFalse(mockstore.dispatchWasCalled)
+        XCTAssertEqual(mockstore.dispatchedActions.count, 0)
     }
 
 }
