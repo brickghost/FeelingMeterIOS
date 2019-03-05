@@ -8,26 +8,43 @@
 
 import XCTest
 
+class MockDelegate: ButtonTap {
+    var invokedButtonTapped = false
+    var invokedButtonTappedCount: Int = 0
+    var invokedButtonTappedParameter: Int = 0
+
+    func buttonTapped(index: Int) {
+        invokedButtonTapped = true
+        invokedButtonTappedCount += 1
+        invokedButtonTappedParameter = index
+    }
+}
+
 class FeelingViewTests: XCTestCase {
-
+    private var testObject: FeelingView!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        testObject = FeelingView()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testCallsDelegateCorrectly() {
+        let mockDelegate = MockDelegate()
+        testObject.delegate = mockDelegate
+        
+        let index = Int.random(in: 0...4)
+        
+        XCTAssertFalse(mockDelegate.invokedButtonTapped)
+        let button = testObject.ratingButtons[index]
+        
+        button.sendActions(for: .touchUpInside)
+        
+        XCTAssertTrue(mockDelegate.invokedButtonTapped)
+        XCTAssertEqual(1, mockDelegate.invokedButtonTappedCount)
+        XCTAssertEqual(index, mockDelegate.invokedButtonTappedParameter)
+        
+        button.sendActions(for: .touchUpInside)
+        
+        XCTAssertEqual(2, mockDelegate.invokedButtonTappedCount)
     }
 
 }
