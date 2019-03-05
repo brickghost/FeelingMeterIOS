@@ -51,11 +51,10 @@ class FeelingViewControllerTests: XCTestCase {
         XCTAssertTrue(mockFeelingView.setButtonImagesCalled)
     }
     
-    func testVCShouldDispatchRatingToStoreWhenRatingControlIsTapped() {
+    func testVCButtonTapProtocalDispatchesToStore() {
         let mockstore = MockStore(reducer: reducer, state: state)
         testObject.appStore = mockstore
-        let button: UIButton = testObject.profile.ratingButtons[1]
-        button.sendActions(for: .touchUpInside)
+        testObject.buttonTapped(index: 1)
         
         XCTAssertTrue(mockstore.dispatchWasCalled)
         XCTAssertEqual(mockstore.dispatchedActions.count, 1)
@@ -64,14 +63,12 @@ class FeelingViewControllerTests: XCTestCase {
         XCTAssertEqual(action.feeling, .notSoGood)
     }
     
-    func testVCShouldNotDspatchRatingToStoreWhenRatingControlIsTappedWithSameRatingAsCurrent() {
+    func testVCButtonTapProtocalDoesNotDispatchToStoreWhenRatingNotChanged() {
         let mockstore = MockStore(reducer: reducer, state: state)
         testObject.appStore = mockstore
-        let button: UIButton = testObject.profile.ratingButtons[2]
-        button.sendActions(for: .touchUpInside)
-        
+        testObject.buttonTapped(index: 2)
+
         XCTAssertFalse(mockstore.dispatchWasCalled)
         XCTAssertEqual(mockstore.dispatchedActions.count, 0)
     }
-
 }
