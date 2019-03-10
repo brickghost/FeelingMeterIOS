@@ -10,10 +10,12 @@ pod 'ReSwift'
 pod 'RxSwift'
 pod 'PureLayout'
 pod 'RxCocoa'
+pod 'Socket.IO-Client-Swift'
 
 target 'FeelingMeterIOSTests' do
 inherit! :search_paths
 # Pods for testing
+pod 'RxTest'
 end
 
 target 'FeelingMeterIOSUITests' do
