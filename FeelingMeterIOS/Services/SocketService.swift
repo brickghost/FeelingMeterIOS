@@ -10,41 +10,51 @@ import Foundation
 import RxSwift
 import SocketIO
 
-protocol SocketIOProtocol {
+extension Reactive where Base: SocketIOClient {
+    var status: Observable<SocketIOStatus> {
+        return Observable.create { (observer) -> Disposable in
+            let uuid = self.base.on(clientEvent: .statusChange) { (data, _) in
+                if let status = data.first as? SocketIOStatus {
+                    observer.onNext(status)
+                }
+            }
+            return Disposables.create { self.base.off(id: uuid) }
+        }
+    }
+}
+
+protocol SocketServiceProtocol {
     var status: Observable<SocketIOStatus> { get }
     func connect()
     func disconnect()
 }
 
-//class SocketService: NSObject, SocketIOProtocol {
-//    static let sharedInstance = SocketService()
-class SocketService: SocketIOProtocol {
-
-    private let socket: SocketIOProtocol
+class SocketService: SocketServiceProtocol {
+    private let manager: SocketManagerSpec
+    private let client: SocketIOClient
     private let disposeBag = DisposeBag()
     
     public convenience init() {
-        let manager = SocketManager(socketURL: URL(string: "https://localhost:8080")!, config: [.log(true), .compress])
-        let socket = manager.defaultSocket
-        self.init(socket: socket as! SocketIOProtocol)
+        let manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(true), .compress])
+        self.init(manager: manager)
     }
     
-    init(socket: SocketIOProtocol,
-         scheduler: SchedulerType = MainScheduler.instance) {
-        self.socket = socket
+    init(manager: SocketManagerSpec) {
+        self.manager = manager
+        self.client = manager.defaultSocket
     }
     
     public var status: Observable<SocketIOStatus> {
-        return socket.status
+        return client.rx.status
     }
     
     func connect() {
-        socket.connect()
-        print("CONNECTING -> SOCKET STATUS \(socket.status)")
+        client.connect()
+        print("CONNECTING -> SOCKET STATUS \(client.status)")
     }
     
     func disconnect() {
-        socket.disconnect()
-        print("DISCONNECTING -> SOCKET STATUS \(socket.status)")
+        client.disconnect()
+        print("DISCONNECTING -> SOCKET STATUS \(client.status)")
     }
 }

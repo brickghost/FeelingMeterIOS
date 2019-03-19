@@ -8,7 +8,6 @@ use_frameworks!
 # Pods for FeelingMeterIOS
 pod 'ReSwift'
 pod 'RxSwift'
-pod 'RxTest'
 pod 'PureLayout'
 pod 'RxCocoa'
 pod 'Socket.IO-Client-Swift'
@@ -16,6 +15,7 @@ pod 'Socket.IO-Client-Swift'
 target 'FeelingMeterIOSTests' do
 inherit! :search_paths
 # Pods for testing
+pod 'RxTest'
 end
 
 target 'FeelingMeterIOSUITests' do
