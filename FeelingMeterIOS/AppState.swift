@@ -14,7 +14,7 @@ struct AppState: StateType, Equatable {
     var feeling: Feeling
     
     init() {
-        self.feeling = .meh
+        self.feeling = .terrible
     }
 }
 

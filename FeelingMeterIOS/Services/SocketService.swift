@@ -42,6 +42,7 @@ class SocketService: SocketServiceProtocol {
     init(manager: SocketManagerSpec) {
         self.manager = manager
         self.client = manager.defaultSocket
+        setupEventHandlers()
     }
     
     public var status: Observable<SocketIOStatus> {
@@ -56,5 +57,14 @@ class SocketService: SocketServiceProtocol {
     func disconnect() {
         client.disconnect()
         print("DISCONNECTING -> SOCKET STATUS \(client.status)")
+    }
+    
+    func setupEventHandlers() {
+        client.on("feeling") { data, ack in
+            print("Socket got a feeling \(data)")
+            if let feeling = data[0] as? Int {
+                store.dispatch(ChangeFeelingAction(feeling: Feeling.allCases[feeling - 1]))
+            }
+        }
     }
 }
