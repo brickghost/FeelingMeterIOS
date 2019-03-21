@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ReSwift
 import RxSwift
 import SocketIO
 
@@ -29,7 +30,8 @@ protocol SocketServiceProtocol {
     func disconnect()
 }
 
-class SocketService: SocketServiceProtocol {
+class SocketService: SocketServiceProtocol, StoreSubscriber {
+    typealias StoreSubscriberStateType = AppState
     private let manager: SocketManagerSpec
     private let client: SocketIOClient
     private let disposeBag = DisposeBag()
@@ -37,6 +39,11 @@ class SocketService: SocketServiceProtocol {
     public convenience init() {
         let manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(true), .compress])
         self.init(manager: manager)
+        store.subscribe(self)
+    }
+    
+    deinit {
+        store.unsubscribe(self)
     }
     
     init(manager: SocketManagerSpec) {
@@ -65,6 +72,13 @@ class SocketService: SocketServiceProtocol {
             if let feeling = data[0] as? Int {
                 store.dispatch(ChangeFeelingAction(feeling: Feeling.allCases[feeling - 1]))
             }
+        }
+    }
+    
+    func newState(state: AppState) {
+        if let value = Feeling.allCases.firstIndex(of: state.feeling) {
+            print("Emitting new feeling: \(state.feeling)")
+            client.emit("update", ["feeling" : value])
         }
     }
 }
