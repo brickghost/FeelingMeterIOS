@@ -12,29 +12,6 @@ import RxTest
 import SocketIO
 import RxCocoa
 
-class MockSocketServiceProtocol: SocketServiceProtocol {
-    var invokedStatusGetter = false
-    var invokedStatusGetterCount = 0
-    var stubbedStatus: Observable<SocketIOStatus>!
-    var status: Observable<SocketIOStatus> {
-        invokedStatusGetter = true
-        invokedStatusGetterCount += 1
-        return stubbedStatus
-    }
-    var invokedConnect = false
-    var invokedConnectCount = 0
-    func connect() {
-        invokedConnect = true
-        invokedConnectCount += 1
-    }
-    var invokedDisconnect = false
-    var invokedDisconnectCount = 0
-    func disconnect() {
-        invokedDisconnect = true
-        invokedDisconnectCount += 1
-    }
-}
-
 class MockSocketClient: SocketIOClient {
     private let emitRelay = PublishRelay<(event: String, items: SocketData)>()
     let emitObservable: Observable<(event: String, items: SocketData)>
