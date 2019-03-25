@@ -12,7 +12,7 @@ import RxTest
 import SocketIO
 import RxCocoa
 
-class McokSocketServiceProtocol: SocketServiceProtocol {
+class MockSocketServiceProtocol: SocketServiceProtocol {
     var invokedStatusGetter = false
     var invokedStatusGetterCount = 0
     var stubbedStatus: Observable<SocketIOStatus>!
@@ -35,7 +35,7 @@ class McokSocketServiceProtocol: SocketServiceProtocol {
     }
 }
 
-class MockSocketService: SocketIOClient {
+class MockSocketClient: SocketIOClient {
     private let emitRelay = PublishRelay<(event: String, items: SocketData)>()
     let emitObservable: Observable<(event: String, items: SocketData)>
     override init(manager: SocketManagerSpec, nsp: String) {
@@ -417,21 +417,17 @@ class MockSocketManager: SocketManagerSpec {
 }
 
 class SocketServiceTests: XCTestCase {
+    private var testObject: SocketService!
     private var disposeBag: DisposeBag!
     private var scheduler: TestScheduler!
-    private var testObject: SocketService!
-    private var mockSocketManager: MockSocketManager!
     private var testableStatusObservable: TestableObservable<SocketIOStatus>!
-    private var mockSocketIOClient: MockSocketService!
+    private var mockSocketIOClient: MockSocketClient!
     
     
     override func setUp() {
         super.setUp()
         disposeBag = DisposeBag()
         scheduler = TestScheduler(initialClock: 0)
-        mockSocketManager = MockSocketManager()
-        mockSocketIOClient = MockSocketService(manager: mockSocketManager, nsp:"")
-        mockSocketManager.stubbedDefaultSocket = mockSocketIOClient
     }
     
     override func tearDown() {
@@ -469,18 +465,24 @@ class SocketServiceTests: XCTestCase {
     }
     
     func testConnectToSocket() {
-        testObject = SocketService(manager: mockSocketManager)
+        createTestObject()
         testObject.connect()
         XCTAssertEqual(mockSocketIOClient.invokedConnectCount, 1)
         XCTAssertEqual(mockSocketIOClient.invokedDisconnectCount, 0)
     }
     
     func testDisconnectFromSocket() {
-        testObject = SocketService(manager: mockSocketManager)
+        createTestObject()
         testObject.disconnect()
         XCTAssertEqual(mockSocketIOClient.invokedConnectCount, 0)
         XCTAssertEqual(mockSocketIOClient.invokedDisconnectCount, 1)
     }
     
-  
+    private func createTestObject(statusEvents: [Recorded<Event<SocketIOStatus>>] = []) {
+        let mockSocketManager = MockSocketManager()
+        mockSocketIOClient = MockSocketClient(manager: mockSocketManager, nsp:"")
+        mockSocketManager.stubbedDefaultSocket = mockSocketIOClient
+        
+        testObject = SocketService(manager: mockSocketManager)
+    }
 }
