@@ -7,7 +7,6 @@
 
 import ReSwift
 import XCTest
-@testable import FeelingMeterIOS
 
 struct EmptyAction: Action { }
 

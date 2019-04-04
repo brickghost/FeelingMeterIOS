@@ -41,6 +41,7 @@ let store = Store(
     reducer: reducer,
     state: AppState())
 
+let subscriptions = AppStateSubscriptions()
 
 // MARK: MODEL/OPTIONS
 enum Feeling: String, CaseIterable {

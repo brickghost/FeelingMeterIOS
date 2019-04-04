@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5B8A619695CA7315AC5F2F9D /* Pods_FeelingMeterIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */; };
 		9B9412C3608636BB49B4455B /* Pods_FeelingMeterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */; };
+		A269C4A5224902640088C2EA /* AppStateSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */; };
+		A269C4A7224902810088C2EA /* AppStateSubscriptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */; };
+		A269C4A8224902870088C2EA /* AppStateSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */; };
 		A2849077222ECB43004A33B3 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2849076222ECB43004A33B3 /* SocketService.swift */; };
 		A2849078222ECB43004A33B3 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2849076222ECB43004A33B3 /* SocketService.swift */; };
 		A284907A222ECB5D004A33B3 /* SocketServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2849079222ECB5D004A33B3 /* SocketServiceTests.swift */; };
@@ -52,6 +55,8 @@
 		68E3D3A5BC56B93FB348BB88 /* Pods-FeelingMeterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		754602405B8B4556937A85B0 /* Pods-FeelingMeterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		975AA906482C371A027853B4 /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
+		A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateSubscriptions.swift; sourceTree = "<group>"; };
+		A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateSubscriptionsTests.swift; sourceTree = "<group>"; };
 		A2849076222ECB43004A33B3 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		A2849079222ECB5D004A33B3 /* SocketServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketServiceTests.swift; sourceTree = "<group>"; };
 		A29E46632215A711009FB179 /* FeelingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingViewControllerTests.swift; sourceTree = "<group>"; };
@@ -174,6 +179,7 @@
 				A2C9B83A2209C01A003B5DF1 /* Images.xcassets */,
 				A2C9B8632209C8AA003B5DF1 /* AppState.swift */,
 				A2C9B83F2209C01A003B5DF1 /* Info.plist */,
+				A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */,
 			);
 			path = FeelingMeterIOS;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 				A2C9B867220B1930003B5DF1 /* AppStateTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
 				A2C9B86C2211B78A003B5DF1 /* ViewControllerTests.swift */,
+				A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */,
 			);
 			path = FeelingMeterIOSTests;
 			sourceTree = "<group>";
@@ -486,6 +493,7 @@
 				A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 				A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */,
 				A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */,
+				A269C4A5224902640088C2EA /* AppStateSubscriptions.swift in Sources */,
 				A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,9 +506,11 @@
 				A29E466B2215C257009FB179 /* FeelingView.swift in Sources */,
 				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
 				A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */,
+				A269C4A8224902870088C2EA /* AppStateSubscriptions.swift in Sources */,
 				A284907A222ECB5D004A33B3 /* SocketServiceTests.swift in Sources */,
 				A2C9B86E2211B78A003B5DF1 /* ViewControllerTests.swift in Sources */,
 				A29E46692215BCEB009FB179 /* AppState.swift in Sources */,
+				A269C4A7224902810088C2EA /* AppStateSubscriptionsTests.swift in Sources */,
 				A29E46652215A711009FB179 /* FeelingViewControllerTests.swift in Sources */,
 				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
 				A2849078222ECB43004A33B3 /* SocketService.swift in Sources */,
