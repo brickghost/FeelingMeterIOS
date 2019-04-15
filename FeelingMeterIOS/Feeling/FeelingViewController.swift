@@ -15,18 +15,27 @@ protocol ButtonTap: class {
     func buttonTapped(index: Int)
 }
 
-class FeelingViewController: UIViewController, StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
+class FeelingViewController: UIViewController {
     
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
     var disposeBag = DisposeBag()
-    var appStore = store
+    var stateSubscriptions: AppStateSubscriptions!
+    var feeling: Feeling!
     
     //MARK: Initialization
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    init(stateSubscriptions: AppStateSubscriptions = subscriptions) {
+        self.stateSubscriptions = stateSubscriptions
+        super.init(nibName: nil, bundle: nil)
         self.profile.delegate = self
+        
+        self.stateSubscriptions.feelingObservable
+            .observeOn(MainScheduler.instance)
+            .subscribe { [weak self] event in
+            if let feeling = event.element {
+                self?.updateFeelingView(feeling: feeling)
+            }
+            }.disposed(by: self.disposeBag)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,27 +53,12 @@ class FeelingViewController: UIViewController, StoreSubscriber {
         profile.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        store.subscribe(self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        store.unsubscribe(self)
-    }
-    
     //MARK: Private Methods
-    func newState(state: FeelingViewController.StoreSubscriberStateType) {
-        updateFeelingLabel(feeling: state.feeling)
-        updateFeelingRatingControl(feeling: state.feeling)
-    }
-    
-    func updateFeelingLabel(feeling: Feeling) {
-        self.profile.feelingLabel.text = feeling.rawValue
-    }
-    
-    func updateFeelingRatingControl(feeling: Feeling) {
+    func updateFeelingView(feeling: Feeling) {
         let rating = calcRating(feeling: feeling)
+        self.feeling = feeling
         self.profile.setButtonImages(rating: rating + 1)
+        self.profile.feelingLabel.text = feeling.rawValue
     }
     
     func calcRating(feeling: Feeling) -> Int {
@@ -78,10 +72,12 @@ class FeelingViewController: UIViewController, StoreSubscriber {
 
 extension FeelingViewController: ButtonTap {
     func buttonTapped(index: Int) {
+        print("BUTTON TAP INVOKED")
         let clickedFeeling = getFeelingByIndex(index: index)
-        if(clickedFeeling == store.state.feeling) {
+        if(clickedFeeling == feeling) {
             return
         }
-        self.appStore.dispatch(ChangeFeelingAction(feeling: clickedFeeling))
+        stateSubscriptions.dispatchFeelingToStore(feeling: clickedFeeling)
+        
     }
 }

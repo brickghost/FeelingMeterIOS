@@ -21,10 +21,23 @@ extension Reactive where Base: SocketIOClient {
             return Disposables.create { self.base.off(id: uuid) }
         }
     }
+    
+    var feeling: Observable<Feeling> {
+        return Observable.create { (observer) -> Disposable in
+            let uuid = self.base.on("feeling") { (data, _) in
+                if let feelingIndex = data.first as? Int {
+                    let feeling = getFeelingByIndex(index: feelingIndex)
+                    observer.onNext(feeling)
+                }
+            }
+            return Disposables.create { self.base.off(id: uuid) }
+        }
+    }
 }
 
 protocol SocketServiceProtocol {
     var status: Observable<SocketIOStatus> { get }
+    var feeling: Observable<Feeling> { get }
     func connect()
     func disconnect()
 }
@@ -48,6 +61,10 @@ class SocketService: SocketServiceProtocol {
         return client.rx.status
     }
     
+    public var feeling: Observable<Feeling> {
+        return client.rx.feeling
+    }
+    
     func connect() {
         client.connect()
         print("CONNECTING -> SOCKET STATUS \(client.status)")
@@ -57,4 +74,12 @@ class SocketService: SocketServiceProtocol {
         client.disconnect()
         print("DISCONNECTING -> SOCKET STATUS \(client.status)")
     }
+}
+
+func calcRating(feeling: Feeling) -> Int {
+    return Feeling.allCases.firstIndex(of: feeling) ?? 1
+}
+
+func getFeelingByIndex(index: Int) -> Feeling {
+    return Feeling.allCases[index]
 }

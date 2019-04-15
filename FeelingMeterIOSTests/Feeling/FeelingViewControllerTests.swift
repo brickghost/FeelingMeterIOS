@@ -7,17 +7,35 @@
 //
 
 import ReSwift
+import ReSwift
 import XCTest
+import RxSwift
+import SocketIO
+
 @testable import FeelingMeterIOS
 
-class MockStore: Store<AppState> {
-    var dispatchWasCalled = false
-    var dispatchedActions: [Action] = []
+class MockAppStateSubscriptions: AppStateSubscriptions {
+    convenience init() {
+        self.init(store: store, socketService: SocketService())
+    }
+    var invokedFeelingObservableGetter = false
+    var invokedFeelingObservableGetterCount = 0
+    var stubbedFeelingObservable: Observable<Feeling>!
+    override var feelingObservable: Observable<Feeling> {
+        invokedFeelingObservableGetter = true
+        invokedFeelingObservableGetterCount += 1
+        return stubbedFeelingObservable
+    }
     
-    override func dispatch(_ action: Action) {
-            print("TEST dispatchFunction called\(action)")
-            dispatchWasCalled = true
-            dispatchedActions.append(action)
+    var invokedDispatchFeelingToStore = false
+    var invokedDispatchFeelingToStoreCount = 0
+    var invokedDispatchFeelingToStoreParameters: (feeling: Feeling, Void)?
+    var invokedDispatchFeelingToStoreParametersList = [(feeling: Feeling, Void)]()
+    override func dispatchFeelingToStore(feeling: Feeling) {
+        invokedDispatchFeelingToStore = true
+        invokedDispatchFeelingToStoreCount += 1
+        invokedDispatchFeelingToStoreParameters = (feeling, ())
+        invokedDispatchFeelingToStoreParametersList.append((feeling, ()))
     }
 }
 
@@ -31,44 +49,59 @@ class MockFeelingView: FeelingView {
                              
 class FeelingViewControllerTests: XCTestCase {
     private var testObject: FeelingViewController!
-    private var state: AppState = AppState()
+    private var mockAppStateSubscriptions: MockAppStateSubscriptions!
+    private var testFeelingSubject: PublishSubject<Feeling>!
     
     override func setUp() {
-        testObject = FeelingViewController()
-        state.feeling = .meh
-        testObject.newState(state: state)
-    }
-
-    func testVCShouldPopulateFeelingLabelWithFeelingFromTheStore() {
-        XCTAssertEqual("I just want my rug, man", testObject.profile.feelingLabel.text)
+        testFeelingSubject = PublishSubject<Feeling>()
+        mockAppStateSubscriptions = MockAppStateSubscriptions()
+        mockAppStateSubscriptions.stubbedFeelingObservable = testFeelingSubject
     }
     
-    func testVCShouldCallSetButtonImagesMethodInFeelingRatingControlBasedOnFeelingFromTheStore() {
+    func testShouldSubscribeToFeelingObservable() {
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
+        XCTAssertTrue(mockAppStateSubscriptions.invokedFeelingObservableGetter)
+    }
+    
+    func testDisposeOfFeelingSubscription() {
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
+        XCTAssertTrue(testFeelingSubject.hasObservers)
+        
+        testObject = nil
+        
+        XCTAssertFalse(testFeelingSubject.hasObservers)
+    }
+
+    func testShouldPopulateFeelingLabelFromFeelingSubscription() {
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
+        testFeelingSubject.onNext(.terrible)
+        XCTAssertEqual("Existence is pain", testObject.profile.feelingLabel.text)
+    }
+    
+    func testShouldCallSetButtonImagesMethodFeelingFromFeelingSubscription() {
         let mockFeelingView = MockFeelingView()
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
         testObject.profile = mockFeelingView
-        state.feeling = .meh
-        testObject.newState(state: state)
+        testFeelingSubject.onNext(.terrible)
         XCTAssertTrue(mockFeelingView.setButtonImagesCalled)
     }
     
-    func testVCButtonTapProtocalDispatchesToStore() {
-        let mockstore = MockStore(reducer: reducer, state: state)
-        testObject.appStore = mockstore
+    func testButtonTapProtocalInvokesSubscriptionsEvent() {
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
         testObject.buttonTapped(index: 1)
-        
-        XCTAssertTrue(mockstore.dispatchWasCalled)
-        XCTAssertEqual(mockstore.dispatchedActions.count, 1)
-        
-        let action: ChangeFeelingAction = mockstore.dispatchedActions[0] as! ChangeFeelingAction
-        XCTAssertEqual(action.feeling, .notSoGood)
-    }
-    
-    func testVCButtonTapProtocalDoesNotDispatchToStoreWhenRatingNotChanged() {
-        let mockstore = MockStore(reducer: reducer, state: state)
-        testObject.appStore = mockstore
-        testObject.buttonTapped(index: 2)
+        let invokedFeeling = mockAppStateSubscriptions.invokedDispatchFeelingToStoreParameters?.feeling
 
-        XCTAssertFalse(mockstore.dispatchWasCalled)
-        XCTAssertEqual(mockstore.dispatchedActions.count, 0)
+        XCTAssertTrue(mockAppStateSubscriptions.invokedDispatchFeelingToStore)
+        XCTAssertEqual(mockAppStateSubscriptions.invokedDispatchFeelingToStoreCount, 1)
+        XCTAssertEqual(invokedFeeling, Feeling.notSoGood)
+        
+    }
+
+    func testButtonTapProtocalDoesNotDispatchToStoreWhenRatingNotChanged() {
+        testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
+        testObject.feeling = Feeling.meh
+        testObject.buttonTapped(index: 2)
+        
+        XCTAssertFalse(mockAppStateSubscriptions.invokedDispatchFeelingToStore)
     }
 }
