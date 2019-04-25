@@ -40,6 +40,7 @@ protocol SocketServiceProtocol {
     var feeling: Observable<Feeling> { get }
     func connect()
     func disconnect()
+    func emitFeeling(feeling: Feeling)
 }
 
 class SocketService: SocketServiceProtocol {
@@ -63,6 +64,10 @@ class SocketService: SocketServiceProtocol {
     
     public var feeling: Observable<Feeling> {
         return client.rx.feeling
+    }
+    
+    func emitFeeling(feeling: Feeling) {
+        client.emit("update", calcRating(feeling: feeling))
     }
     
     func connect() {

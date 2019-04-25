@@ -20,11 +20,11 @@ class FeelingViewController: UIViewController {
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
     var disposeBag = DisposeBag()
-    var stateSubscriptions: AppStateSubscriptions!
+    var stateSubscriptions: AppStateSubscriptionsProtocol!
     var feeling: Feeling!
     
     //MARK: Initialization
-    init(stateSubscriptions: AppStateSubscriptions = subscriptions) {
+    init(stateSubscriptions: AppStateSubscriptionsProtocol = subscriptions) {
         self.stateSubscriptions = stateSubscriptions
         super.init(nibName: nil, bundle: nil)
         self.profile.delegate = self
@@ -77,7 +77,6 @@ extension FeelingViewController: ButtonTap {
         if(clickedFeeling == feeling) {
             return
         }
-        stateSubscriptions.dispatchFeelingToStore(feeling: clickedFeeling)
-        
+        stateSubscriptions.updateFeeling(feeling: clickedFeeling)
     }
 }

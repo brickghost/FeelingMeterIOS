@@ -11,7 +11,14 @@ import ReSwift
 import SocketIO
 import RxSwift
 
-class AppStateSubscriptions: StoreSubscriber {
+protocol AppStateSubscriptionsProtocol {
+    func updateFeeling(feeling: Feeling)
+    func dispatchFeelingToStore(feeling: Feeling)
+    func emitFeelingToSocket(feeling: Feeling)
+    var feelingObservable: Observable<Feeling> { get }
+}
+
+class AppStateSubscriptions: AppStateSubscriptionsProtocol, StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     
     //MARK: Properties
@@ -52,6 +59,11 @@ class AppStateSubscriptions: StoreSubscriber {
         stateObservable.onNext(state)
     }
     
+    func updateFeeling(feeling: Feeling) {
+        dispatchFeelingToStore(feeling: feeling)
+        emitFeelingToSocket(feeling: feeling)
+    }
+    
     //MARK: Store Subscriptions
     var feelingObservable: Observable<Feeling> {
         return stateObservable.map { $0.feeling }.distinctUntilChanged()
@@ -64,6 +76,11 @@ class AppStateSubscriptions: StoreSubscriber {
     
     func dispatchFeelingToStore(feeling: Feeling) {
         self.appStore.dispatch(ChangeFeelingAction(feeling: feeling))
+    }
+    
+    //MARK: Socket Emitions
+    func emitFeelingToSocket(feeling: Feeling) {
+        self.socketService.emitFeeling(feeling: feeling)
     }
 }
 

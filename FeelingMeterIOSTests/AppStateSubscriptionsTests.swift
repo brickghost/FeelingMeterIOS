@@ -59,6 +59,16 @@ class MockSocketService: SocketService {
         invokedFeelingGetterCount += 1
         return stubbedFeeling
     }
+    var invokedEmitFeeling = false
+    var invokedEmitFeelingCount = 0
+    var invokedEmitFeelingParameters: (feeling: Feeling, Void)?
+    var invokedEmitFeelingParametersList = [(feeling: Feeling, Void)]()
+    override func emitFeeling(feeling: Feeling) {
+        invokedEmitFeeling = true
+        invokedEmitFeelingCount += 1
+        invokedEmitFeelingParameters = (feeling, ())
+        invokedEmitFeelingParametersList.append((feeling, ()))
+    }
     var invokedConnect = false
     var invokedConnectCount = 0
     override func connect() {
@@ -236,5 +246,19 @@ class AppStateSubscriptionsTests: XCTestCase {
         XCTAssertTrue(mockStore.dispatchWasCalled)
         XCTAssertEqual(mockStore.dispatchedActions.count, 2)
         XCTAssertEqual(action.feeling, feeling2)
+    }
+    
+    func testUpdateFeeling() {
+        let feeling: Feeling = .great
+        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject.updateFeeling(feeling: feeling)
+       
+        XCTAssertTrue(mockStore.dispatchWasCalled)
+        XCTAssertEqual(mockStore.dispatchedActions.count, 1)
+        XCTAssertEqual((mockStore.dispatchedActions.first as? ChangeFeelingAction)?.feeling, feeling)
+        
+        XCTAssertTrue(mockSocketService.invokedEmitFeeling)
+        XCTAssertEqual(mockSocketService.invokedEmitFeelingCount, 1)
+        XCTAssertEqual((mockSocketService.invokedEmitFeelingParameters)?.feeling, feeling)
     }
 }

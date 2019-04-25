@@ -14,28 +14,44 @@ import SocketIO
 
 @testable import FeelingMeterIOS
 
-class MockAppStateSubscriptions: AppStateSubscriptions {
-    convenience init() {
-        self.init(store: store, socketService: SocketService())
-    }
+class MockAppStateSubscriptions: AppStateSubscriptionsProtocol {
     var invokedFeelingObservableGetter = false
     var invokedFeelingObservableGetterCount = 0
     var stubbedFeelingObservable: Observable<Feeling>!
-    override var feelingObservable: Observable<Feeling> {
+    var feelingObservable: Observable<Feeling> {
         invokedFeelingObservableGetter = true
         invokedFeelingObservableGetterCount += 1
         return stubbedFeelingObservable
     }
-    
+    var invokedUpdateFeeling = false
+    var invokedUpdateFeelingCount = 0
+    var invokedUpdateFeelingParameters: (feeling: Feeling, Void)?
+    var invokedUpdateFeelingParametersList = [(feeling: Feeling, Void)]()
+    func updateFeeling(feeling: Feeling) {
+        invokedUpdateFeeling = true
+        invokedUpdateFeelingCount += 1
+        invokedUpdateFeelingParameters = (feeling, ())
+        invokedUpdateFeelingParametersList.append((feeling, ()))
+    }
     var invokedDispatchFeelingToStore = false
     var invokedDispatchFeelingToStoreCount = 0
     var invokedDispatchFeelingToStoreParameters: (feeling: Feeling, Void)?
     var invokedDispatchFeelingToStoreParametersList = [(feeling: Feeling, Void)]()
-    override func dispatchFeelingToStore(feeling: Feeling) {
+    func dispatchFeelingToStore(feeling: Feeling) {
         invokedDispatchFeelingToStore = true
         invokedDispatchFeelingToStoreCount += 1
         invokedDispatchFeelingToStoreParameters = (feeling, ())
         invokedDispatchFeelingToStoreParametersList.append((feeling, ()))
+    }
+    var invokedEmitFeelingToSocket = false
+    var invokedEmitFeelingToSocketCount = 0
+    var invokedEmitFeelingToSocketParameters: (feeling: Feeling, Void)?
+    var invokedEmitFeelingToSocketParametersList = [(feeling: Feeling, Void)]()
+    func emitFeelingToSocket(feeling: Feeling) {
+        invokedEmitFeelingToSocket = true
+        invokedEmitFeelingToSocketCount += 1
+        invokedEmitFeelingToSocketParameters = (feeling, ())
+        invokedEmitFeelingToSocketParametersList.append((feeling, ()))
     }
 }
 
@@ -89,12 +105,11 @@ class FeelingViewControllerTests: XCTestCase {
     func testButtonTapProtocalInvokesSubscriptionsEvent() {
         testObject = FeelingViewController(stateSubscriptions: mockAppStateSubscriptions)
         testObject.buttonTapped(index: 1)
-        let invokedFeeling = mockAppStateSubscriptions.invokedDispatchFeelingToStoreParameters?.feeling
+        let invokedFeeling = mockAppStateSubscriptions.invokedUpdateFeelingParameters?.feeling
 
-        XCTAssertTrue(mockAppStateSubscriptions.invokedDispatchFeelingToStore)
-        XCTAssertEqual(mockAppStateSubscriptions.invokedDispatchFeelingToStoreCount, 1)
+        XCTAssertTrue(mockAppStateSubscriptions.invokedUpdateFeeling)
+        XCTAssertEqual(mockAppStateSubscriptions.invokedUpdateFeelingCount, 1)
         XCTAssertEqual(invokedFeeling, Feeling.notSoGood)
-        
     }
 
     func testButtonTapProtocalDoesNotDispatchToStoreWhenRatingNotChanged() {
@@ -102,6 +117,6 @@ class FeelingViewControllerTests: XCTestCase {
         testObject.feeling = Feeling.meh
         testObject.buttonTapped(index: 2)
         
-        XCTAssertFalse(mockAppStateSubscriptions.invokedDispatchFeelingToStore)
+        XCTAssertFalse(mockAppStateSubscriptions.invokedUpdateFeeling)
     }
 }
