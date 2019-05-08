@@ -8,18 +8,6 @@
 
 import XCTest
 
-class MockDelegate: ButtonTap {
-    var invokedButtonTapped = false
-    var invokedButtonTappedCount: Int = 0
-    var invokedButtonTappedParameter: Int = 0
-
-    func buttonTapped(index: Int) {
-        invokedButtonTapped = true
-        invokedButtonTappedCount += 1
-        invokedButtonTappedParameter = index
-    }
-}
-
 class FeelingViewTests: XCTestCase {
     private var testObject: FeelingView!
     
@@ -28,7 +16,7 @@ class FeelingViewTests: XCTestCase {
     }
 
     func testCallsDelegateCorrectly() {
-        let mockDelegate = MockDelegate()
+        let mockDelegate = MockDelegateButtonTap()
         testObject.delegate = mockDelegate
         
         let index = Int.random(in: 0...4)

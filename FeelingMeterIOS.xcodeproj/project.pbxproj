@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5B8A619695CA7315AC5F2F9D /* Pods_FeelingMeterIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D10392725C919CA08CB952C2 /* Pods_FeelingMeterIOSUITests.framework */; };
 		9B9412C3608636BB49B4455B /* Pods_FeelingMeterIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C23D2992EE331552D33515 /* Pods_FeelingMeterIOS.framework */; };
+		A24EC56D2281BB9F00AF6D5B /* MockSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC56C2281BB9F00AF6D5B /* MockSocketClient.swift */; };
+		A24EC56F2283040700AF6D5B /* MockAppStateSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC56E2283040700AF6D5B /* MockAppStateSubscriptions.swift */; };
+		A24EC5712283049C00AF6D5B /* MockFeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC5702283049C00AF6D5B /* MockFeelingView.swift */; };
+		A24EC5732283056800AF6D5B /* MockDelegateButtonTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC5722283056800AF6D5B /* MockDelegateButtonTap.swift */; };
+		A24EC575228305BA00AF6D5B /* MockStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC574228305BA00AF6D5B /* MockStore.swift */; };
+		A24EC5772283060400AF6D5B /* MockSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC5762283060400AF6D5B /* MockSocketService.swift */; };
 		A269C4A5224902640088C2EA /* AppStateSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */; };
 		A269C4A7224902810088C2EA /* AppStateSubscriptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */; };
 		A269C4A8224902870088C2EA /* AppStateSubscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */; };
@@ -22,7 +28,6 @@
 		A29E466B2215C257009FB179 /* FeelingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8722212FA2D003B5DF1 /* FeelingView.swift */; };
 		A2C9B8342209C018003B5DF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8332209C018003B5DF1 /* AppDelegate.swift */; };
 		A2C9B83B2209C01A003B5DF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C9B83A2209C01A003B5DF1 /* Images.xcassets */; };
-		A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */; };
 		A2C9B8542209C01A003B5DF1 /* FeelingMeterIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */; };
 		A2C9B8642209C8AA003B5DF1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B8632209C8AA003B5DF1 /* AppState.swift */; };
 		A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9B867220B1930003B5DF1 /* AppStateTests.swift */; };
@@ -54,6 +59,12 @@
 		68E3D3A5BC56B93FB348BB88 /* Pods-FeelingMeterIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		754602405B8B4556937A85B0 /* Pods-FeelingMeterIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		975AA906482C371A027853B4 /* Pods-FeelingMeterIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeelingMeterIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS.release.xcconfig"; sourceTree = "<group>"; };
+		A24EC56C2281BB9F00AF6D5B /* MockSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSocketClient.swift; sourceTree = "<group>"; };
+		A24EC56E2283040700AF6D5B /* MockAppStateSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppStateSubscriptions.swift; sourceTree = "<group>"; };
+		A24EC5702283049C00AF6D5B /* MockFeelingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeelingView.swift; sourceTree = "<group>"; };
+		A24EC5722283056800AF6D5B /* MockDelegateButtonTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDelegateButtonTap.swift; sourceTree = "<group>"; };
+		A24EC574228305BA00AF6D5B /* MockStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStore.swift; sourceTree = "<group>"; };
+		A24EC5762283060400AF6D5B /* MockSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSocketService.swift; sourceTree = "<group>"; };
 		A269C4A4224902640088C2EA /* AppStateSubscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateSubscriptions.swift; sourceTree = "<group>"; };
 		A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateSubscriptionsTests.swift; sourceTree = "<group>"; };
 		A2849076222ECB43004A33B3 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
@@ -65,7 +76,6 @@
 		A2C9B83A2209C01A003B5DF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2C9B83F2209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C9B8442209C01A003B5DF1 /* FeelingMeterIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSTests.swift; sourceTree = "<group>"; };
 		A2C9B84A2209C01A003B5DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2C9B84F2209C01A003B5DF1 /* FeelingMeterIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeelingMeterIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C9B8532209C01A003B5DF1 /* FeelingMeterIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingMeterIOSUITests.swift; sourceTree = "<group>"; };
@@ -119,6 +129,19 @@
 				F1808042E88DEE2AB322F11D /* Pods-FeelingMeterIOSUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A24EC56B2281BB7600AF6D5B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A24EC56C2281BB9F00AF6D5B /* MockSocketClient.swift */,
+				A24EC56E2283040700AF6D5B /* MockAppStateSubscriptions.swift */,
+				A24EC5702283049C00AF6D5B /* MockFeelingView.swift */,
+				A24EC5722283056800AF6D5B /* MockDelegateButtonTap.swift */,
+				A24EC574228305BA00AF6D5B /* MockStore.swift */,
+				A24EC5762283060400AF6D5B /* MockSocketService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		A2849074222ECB01004A33B3 /* Services */ = {
@@ -185,9 +208,9 @@
 		A2C9B8472209C01A003B5DF1 /* FeelingMeterIOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A24EC56B2281BB7600AF6D5B /* Mocks */,
 				A2849075222ECB10004A33B3 /* Services */,
 				A29E46622215A6D8009FB179 /* Feeling */,
-				A2C9B8482209C01A003B5DF1 /* FeelingMeterIOSTests.swift */,
 				A2C9B867220B1930003B5DF1 /* AppStateTests.swift */,
 				A2C9B84A2209C01A003B5DF1 /* Info.plist */,
 				A269C4A6224902810088C2EA /* AppStateSubscriptionsTests.swift */,
@@ -500,16 +523,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A29E46682215A726009FB179 /* FeelingViewTests.swift in Sources */,
+				A24EC5712283049C00AF6D5B /* MockFeelingView.swift in Sources */,
 				A29E466B2215C257009FB179 /* FeelingView.swift in Sources */,
+				A24EC56F2283040700AF6D5B /* MockAppStateSubscriptions.swift in Sources */,
 				A2C9B86A220B1E37003B5DF1 /* AppStateTests.swift in Sources */,
+				A24EC56D2281BB9F00AF6D5B /* MockSocketClient.swift in Sources */,
+				A24EC5772283060400AF6D5B /* MockSocketService.swift in Sources */,
 				A29E466A2215C221009FB179 /* FeelingViewController.swift in Sources */,
 				A269C4A8224902870088C2EA /* AppStateSubscriptions.swift in Sources */,
 				A284907A222ECB5D004A33B3 /* SocketServiceTests.swift in Sources */,
 				A29E46692215BCEB009FB179 /* AppState.swift in Sources */,
 				A269C4A7224902810088C2EA /* AppStateSubscriptionsTests.swift in Sources */,
 				A29E46652215A711009FB179 /* FeelingViewControllerTests.swift in Sources */,
-				A2C9B8492209C01A003B5DF1 /* FeelingMeterIOSTests.swift in Sources */,
 				A2849078222ECB43004A33B3 /* SocketService.swift in Sources */,
+				A24EC5732283056800AF6D5B /* MockDelegateButtonTap.swift in Sources */,
+				A24EC575228305BA00AF6D5B /* MockStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
