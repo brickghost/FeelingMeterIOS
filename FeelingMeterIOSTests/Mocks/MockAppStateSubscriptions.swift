@@ -1,7 +1,7 @@
 import RxSwift
 import SocketIO
 
-class MockAppStateSubscriptions: AppStateSubscriptionsProtocol {
+class MockAppStateSubscriptions: SubscriptionsProtocol {
     var invokedFeelingObservableGetter = false
     var invokedFeelingObservableGetterCount = 0
     var stubbedFeelingObservable: Observable<Feeling>!

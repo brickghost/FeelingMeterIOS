@@ -4,9 +4,9 @@ import RxSwift
 import RxTest
 import SocketIO
 
-class AppStateSubscriptionsTests: XCTestCase {
+class SubscriptionsTests: XCTestCase {
     private var disposeBag: DisposeBag!
-    private var testObject: AppStateSubscriptions!
+    private var testObject: Subscriptions!
     private var scheduler: TestScheduler!
     private var mockSocketService: MockSocketService!
     private var testStatusSubject: PublishSubject<SocketIOStatus>!
@@ -35,12 +35,12 @@ class AppStateSubscriptionsTests: XCTestCase {
     }
 
     func testShouldSubscribeToSocketStatus() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         XCTAssertTrue(mockSocketService.invokedStatusGetter)
     }
     
     func testDisposeOfStatusSubscription() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         
         XCTAssertTrue(testStatusSubject.hasObservers)
         
@@ -50,13 +50,13 @@ class AppStateSubscriptionsTests: XCTestCase {
     }
     
     func testShouldSubscribeToSocketFeeling() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         scheduler.start()
         XCTAssertTrue(mockSocketService.invokedFeelingGetter)
     }
     
     func testDisposeOfFeelingSubscription() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         
         XCTAssertTrue(testFeelingSubject.hasObservers)
         
@@ -66,13 +66,13 @@ class AppStateSubscriptionsTests: XCTestCase {
     }
     
     func testShouldSubscribeToStore() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         scheduler.start()
         XCTAssertTrue(mockStore.invokedSubscribe)
     }
     
     func testShouldUnsubscribeFromStore() {
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         
         XCTAssertFalse(mockStore.invokedUnsubscribe)
         
@@ -83,7 +83,7 @@ class AppStateSubscriptionsTests: XCTestCase {
     
     func testFeelingSubscription() {
         let testObserver = scheduler.createObserver(Feeling.self)
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         testObject
             .feelingObservable
             .subscribe(testObserver)
@@ -95,7 +95,7 @@ class AppStateSubscriptionsTests: XCTestCase {
     
     func testFeelingSubscriptionDistinctUntilChanged() {
         let testObserver = scheduler.createObserver(Feeling.self)
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         testObject
             .feelingObservable
             .subscribe(testObserver)
@@ -116,7 +116,7 @@ class AppStateSubscriptionsTests: XCTestCase {
         let events = Recorded.events([Recorded.next(1, status1), Recorded.next(2, status2)])
         let testableStatusObservable = scheduler.createColdObservable(events)
         mockSocketService.stubbedStatus = testableStatusObservable.asObservable()
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         testObject
             .socketService
             .status
@@ -146,7 +146,7 @@ class AppStateSubscriptionsTests: XCTestCase {
         let events = Recorded.events([Recorded.next(1, feeling1), Recorded.next(2, feeling2)])
         let testableStatusObservable = scheduler.createColdObservable(events)
         mockSocketService.stubbedFeeling = testableStatusObservable.asObservable()
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         testObject
             .socketService
             .feeling
@@ -171,7 +171,7 @@ class AppStateSubscriptionsTests: XCTestCase {
     
     func testUpdateFeeling() {
         let feeling: Feeling = .great
-        testObject = AppStateSubscriptions(store: mockStore, socketService: mockSocketService)
+        testObject = Subscriptions(store: mockStore, socketService: mockSocketService)
         testObject.updateFeeling(feeling: feeling)
        
         XCTAssertTrue(mockStore.dispatchWasCalled)

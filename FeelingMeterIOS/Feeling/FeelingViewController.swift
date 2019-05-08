@@ -12,11 +12,11 @@ class FeelingViewController: UIViewController {
     //MARK: Properties
     var profile = FeelingView(frame: CGRect.zero)
     var disposeBag = DisposeBag()
-    var stateSubscriptions: AppStateSubscriptionsProtocol!
+    var stateSubscriptions: SubscriptionsProtocol!
     var feeling: Feeling!
     
     //MARK: Initialization
-    init(stateSubscriptions: AppStateSubscriptionsProtocol = subscriptions) {
+    init(stateSubscriptions: SubscriptionsProtocol = subscriptions) {
         self.stateSubscriptions = stateSubscriptions
         super.init(nibName: nil, bundle: nil)
         self.profile.delegate = self

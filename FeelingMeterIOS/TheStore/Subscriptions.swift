@@ -3,14 +3,14 @@ import ReSwift
 import SocketIO
 import RxSwift
 
-protocol AppStateSubscriptionsProtocol {
+protocol SubscriptionsProtocol {
     func updateFeeling(feeling: Feeling)
     func dispatchFeelingToStore(feeling: Feeling)
     func emitFeelingToSocket(feeling: Feeling)
     var feelingObservable: Observable<Feeling> { get }
 }
 
-class AppStateSubscriptions: AppStateSubscriptionsProtocol, StoreSubscriber {
+class Subscriptions: SubscriptionsProtocol, StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     
     //MARK: Properties
@@ -47,7 +47,7 @@ class AppStateSubscriptions: AppStateSubscriptionsProtocol, StoreSubscriber {
     }
     
     //MARK: Public Methods
-    func newState(state: AppStateSubscriptions.StoreSubscriberStateType) {
+    func newState(state: Subscriptions.StoreSubscriberStateType) {
         stateObservable.onNext(state)
     }
     

@@ -1,9 +1,9 @@
 import ReSwift
 import XCTest
 
-struct EmptyAction: Action { }
+fileprivate struct EmptyAction: Action { }
 
-class AppStateTests: XCTestCase {
+class StateTests: XCTestCase {
 
     var  state = AppState()
     override func setUp() {
