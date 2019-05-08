@@ -1,11 +1,3 @@
-//
-//  AppStateSubscriptionsTests.swift
-//  FeelingMeterIOSTests
-//
-//  Created by Andrew Bricker on 3/25/19.
-//  Copyright © 2019 code FU Creative. All rights reserved.
-//
-
 import ReSwift
 import XCTest
 import RxSwift

@@ -1,11 +1,3 @@
-//
-//  FeelingViewTests.swift
-//  FeelingMeterIOS
-//
-//  Created by Andrew Bricker on 2/14/19.
-//  Copyright © 2019 code FU Creative. All rights reserved.
-//
-
 import XCTest
 
 class FeelingViewTests: XCTestCase {

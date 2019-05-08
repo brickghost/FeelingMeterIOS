@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  FeelingMeterIOS
-//
-//  Created by Andrew Bricker on 2/5/19.
-//  Copyright © 2019 code FU Creative. All rights reserved.
-//
-
 import UIKit
 import ReSwift
 

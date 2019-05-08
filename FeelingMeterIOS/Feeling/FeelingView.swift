@@ -1,14 +1,4 @@
-//
-//  FeelingView.swift
-//  FeelingMeterIOS
-//
-//  Created by Andrew Bricker on 2/12/19.
-//  Copyright © 2019 code FU Creative. All rights reserved.
-//
-
 import UIKit
-
-
 
 class FeelingView: UIView {
     

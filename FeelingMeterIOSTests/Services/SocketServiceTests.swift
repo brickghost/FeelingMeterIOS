@@ -1,11 +1,3 @@
-//
-//  SocketServiceTests.swift
-//  FeelingMeterIOSTests
-//
-//  Created by Andrew Bricker on 3/5/19.
-//  Copyright © 2019 code FU Creative. All rights reserved.
-//
-
 import XCTest
 import RxSwift
 import RxTest
