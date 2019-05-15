@@ -1,8 +1,11 @@
 import ReSwift
+import ReSwiftThunk
 
+let thunksMiddleware: Middleware<AppState> = createThunksMiddleware()
 let store = AnyStoreType(
     reducer: reducer,
-    state: AppState())
+    state: AppState(),
+    middleware: [thunksMiddleware])
 
 private let socketService = SocketService()
 let subscriptions = Subscriptions(socketService: socketService)

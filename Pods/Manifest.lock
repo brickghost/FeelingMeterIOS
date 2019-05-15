@@ -1,6 +1,8 @@
 PODS:
   - PureLayout (3.1.4)
   - ReSwift (4.0.1)
+  - ReSwiftThunk (1.1.0):
+    - ReSwift (~> 4.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -16,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - PureLayout
   - ReSwift
+  - ReSwiftThunk
   - RxCocoa
   - RxSwift
   - RxTest
@@ -25,6 +28,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - PureLayout
     - ReSwift
+    - ReSwiftThunk
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -35,6 +39,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  ReSwiftThunk: 727c1549dbd2949472e1c72bec44b1008d7c4f92
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
@@ -42,6 +47,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 8bd3e9848905293db8bf262e294a8b40311e5056
+PODFILE CHECKSUM: 0a5fe8613e59df9738caa1ab82acf7fb018d79ad
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

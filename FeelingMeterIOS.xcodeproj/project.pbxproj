@@ -25,6 +25,7 @@
 		A24EC58422830A8D00AF6D5B /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC57F22830A2300AF6D5B /* Actions.swift */; };
 		A24EC58722830C1F00AF6D5B /* ActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC58622830C1F00AF6D5B /* ActionsTests.swift */; };
 		A24EC58922830CE400AF6D5B /* ReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC58822830CE400AF6D5B /* ReducerTests.swift */; };
+		A24EC58B2284621200AF6D5B /* ThunkMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24EC58A2284621200AF6D5B /* ThunkMiddleware.swift */; };
 		A269C4A5224902640088C2EA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* Subscriptions.swift */; };
 		A269C4A7224902810088C2EA /* SubscriptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A6224902810088C2EA /* SubscriptionsTests.swift */; };
 		A269C4A8224902870088C2EA /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269C4A4224902640088C2EA /* Subscriptions.swift */; };
@@ -79,6 +80,7 @@
 		A24EC57F22830A2300AF6D5B /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		A24EC58622830C1F00AF6D5B /* ActionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTests.swift; sourceTree = "<group>"; };
 		A24EC58822830CE400AF6D5B /* ReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerTests.swift; sourceTree = "<group>"; };
+		A24EC58A2284621200AF6D5B /* ThunkMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunkMiddleware.swift; sourceTree = "<group>"; };
 		A269C4A4224902640088C2EA /* Subscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		A269C4A6224902810088C2EA /* SubscriptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsTests.swift; sourceTree = "<group>"; };
 		A2849076222ECB43004A33B3 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A24EC57B2283085F00AF6D5B /* State.swift */,
 				A24EC57D228309D800AF6D5B /* Reducer.swift */,
 				A24EC57F22830A2300AF6D5B /* Actions.swift */,
+				A24EC58A2284621200AF6D5B /* ThunkMiddleware.swift */,
 			);
 			path = TheStore;
 			sourceTree = "<group>";
@@ -418,9 +421,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwiftThunk/ReSwiftThunk.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -433,6 +437,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftThunk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -441,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeelingMeterIOS/Pods-FeelingMeterIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6702A0B9BA43BBE8CB6BEB5A /* [CP] Check Pods Manifest.lock */ = {
@@ -496,7 +501,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -511,7 +516,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeelingMeterIOSTests/Pods-FeelingMeterIOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FDEF1D7CBD9A75B3C6853242 /* [CP] Check Pods Manifest.lock */ = {
@@ -547,6 +552,7 @@
 				A2849077222ECB43004A33B3 /* SocketService.swift in Sources */,
 				A2C9B87B2213041F003B5DF1 /* FeelingViewController.swift in Sources */,
 				A2C9B8732212FA2D003B5DF1 /* FeelingView.swift in Sources */,
+				A24EC58B2284621200AF6D5B /* ThunkMiddleware.swift in Sources */,
 				A24EC58022830A2300AF6D5B /* Actions.swift in Sources */,
 				A24EC57E228309D800AF6D5B /* Reducer.swift in Sources */,
 				A269C4A5224902640088C2EA /* Subscriptions.swift in Sources */,

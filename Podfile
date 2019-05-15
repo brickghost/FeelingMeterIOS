@@ -11,6 +11,7 @@ pod 'RxSwift'
 pod 'PureLayout'
 pod 'RxCocoa'
 pod 'Socket.IO-Client-Swift'
+pod 'ReSwiftThunk'
 
 target 'FeelingMeterIOSTests' do
 inherit! :search_paths

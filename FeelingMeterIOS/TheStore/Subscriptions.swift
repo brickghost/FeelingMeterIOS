@@ -2,6 +2,7 @@ import Foundation
 import ReSwift
 import SocketIO
 import RxSwift
+import ReSwiftThunk
 
 protocol SubscriptionsProtocol {
     func updateFeeling(feeling: Feeling)
@@ -67,7 +68,7 @@ class Subscriptions: SubscriptionsProtocol, StoreSubscriber {
     }
     
     func dispatchFeelingToStore(feeling: Feeling) {
-        self.appStore.dispatch(ChangeFeelingAction(feeling: feeling))
+        self.appStore.dispatch(thunkFeeling(feeling))
     }
     
     //MARK: Socket Emitions
@@ -115,6 +116,13 @@ class AnyStoreType<AppState: StateType>: MyStoreType {
     }
     
     func dispatch(_ asyncActionCreator: Action, callback: ((AppState) -> Void)?) {
+    }
+    
+    func thunkFeeling(_ feeling: Feeling) -> Thunk<AppState> {
+        return Thunk<AppState> { dispatch, getState in
+            
+            dispatch(ChangeFeelingAction(feeling: feeling))
+        }
     }
 }
 
